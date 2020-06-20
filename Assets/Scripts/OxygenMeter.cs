@@ -1,0 +1,61 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class OxygenMeter : MonoBehaviour
+{
+	Image meter;
+	RectTransform fx;
+	float depleteSpeed = 0.03f;
+	float fillSpeed = 3f;
+
+	private void Awake()
+	{
+		meter = GetComponent<Image>();
+		//again, not good coding, but avoids strange behavior when GetComponentInChildren returns the
+		// RectTransform of this object, not the child
+		fx = transform.GetChild(0).GetComponent<RectTransform>();
+	}
+
+	public void OnWaterEntered()
+	{
+		Debug.Log("water");
+		StopAllCoroutines();
+		StartCoroutine(Change(true));
+	}
+
+	public void OnAirEntered()
+	{
+		Debug.Log("air");
+		StopAllCoroutines();
+		StartCoroutine(Change(false));
+	}
+
+	IEnumerator Change(bool decrease)
+	{
+		if (decrease)
+		{
+			while (meter.fillAmount > 0f)
+			{
+				meter.fillAmount -= Time.deltaTime * depleteSpeed;
+				AdjustFX();
+				yield return null;
+			}
+		}
+		else
+		{
+			while (meter.fillAmount < 100f)
+			{
+				meter.fillAmount += Time.deltaTime * fillSpeed;
+				AdjustFX();
+				yield return null;
+			}
+		}
+	}
+
+	void AdjustFX()
+	{
+		fx.anchoredPosition = new Vector2(0, Mathf.Lerp(-170f, 170f, meter.fillAmount));
+	}
+}
