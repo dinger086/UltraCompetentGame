@@ -134,6 +134,15 @@ public class PlayerScript : MonoBehaviour
                 Walk();
                 break;
         }
+
+		//for testing, not final
+		if (Input.GetKeyDown(KeyCode.F))
+		{
+			if (FoodEaten != null)
+			{
+				FoodEaten(10f);
+			}
+		}
     }
 
 
