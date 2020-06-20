@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5508366157497697254}
   - component: {fileID: 5508366157497697253}
   - component: {fileID: 5508366157497697252}
+  - component: {fileID: 262422301196878729}
+  - component: {fileID: 4793958247831549044}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -129,4 +131,48 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.13351327, y: 0.13081253}
+  m_EdgeRadius: 0
+--- !u!114 &262422301196878729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508366157497697243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06dbe2c01179e6844b9f64e13243d01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inWater: 0
+  OnGroundTrigger: {fileID: 4793958247831549044}
+  PlayerShape: {fileID: 5508366157497697252}
+  PlayerHead: {fileID: 0}
+  swimForce: 20
+  jumpPower: 0.2
+--- !u!61 &4793958247831549044
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508366157497697243}
+  m_Enabled: 1
+  m_Density: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.06398283}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.117147624, y: 0.007784553}
   m_EdgeRadius: 0

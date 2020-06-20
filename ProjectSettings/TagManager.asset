@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - AirBubble
+  - Platform
   layers:
   - Default
   - TransparentFX
