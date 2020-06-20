@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerScript : MonoBehaviour
 {
 
@@ -79,14 +78,17 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-
+    private ContactFilter2D con = new ContactFilter2D;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      if(collision.gameObject.tag == "AirBubble")
+        if (collision.gameObject.tag == "AirBubble")
         {
-            Enter("air");
-        }
+            EdgeCollider2D edge = collision.gameObject.GetComponent<EdgeCollider2D>();
+            Collider2D test = new Collider2D();
+            int a = collision.OverlapCollider(con.NoFilter, test);
+
+        }    
     }
 
     private void OnTriggerExit2D(Collider2D collision)
