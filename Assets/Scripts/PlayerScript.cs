@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+       
 
     private Rigidbody2D r2d;
-    public bool onGround = false;
-    public bool inWater = false;
+    private bool onGround = false;
+    private bool inWater = false;
 
     //for sending events to the oxygen meter
 	public delegate void OxygenHandler();
@@ -26,7 +27,8 @@ public class PlayerScript : MonoBehaviour
 
     //for making shure the entire player body is inside an air buble, will probably not work too well with konvex shapes as im just testing the 4 corners 1
     private Vector2 size;
-
+    [SerializeField]
+    Camera camera;
     [SerializeField]
     BoxCollider2D OnGroundTrigger;
     [SerializeField]
@@ -50,7 +52,7 @@ public class PlayerScript : MonoBehaviour
         { 
             case "air":
                 inWater = false;
-                r2d.drag = 0.1f;
+                r2d.drag = 0.4f;
                 r2d.gravityScale = 1f;
 
 				if (EnteredAir != null)
@@ -108,11 +110,11 @@ public class PlayerScript : MonoBehaviour
         float delta = Time.deltaTime;
 
 		Vector2 direction = new Vector2(0, 0);
-		if (Input.GetKey("w"))
-		{
+        if (Input.GetKey("w"))
+        {
             Jump();
         }
-		if (Input.GetKey("s"))
+        if (Input.GetKey("s"))
 		{
 			//direction.y -= 1f;
 		}
@@ -125,9 +127,12 @@ public class PlayerScript : MonoBehaviour
 			direction.x += 1f;
 		}
 
-		direction *= swimForce * delta;
-		r2d.AddForce(direction, ForceMode2D.Force);
-	}
+		direction *= delta;
+        
+        r2d.AddForce(direction*20f, ForceMode2D.Force);
+        
+
+    }
 
     private float jumpCooldown = 0f;
     private float jumpPause = 0.2f;
@@ -145,6 +150,12 @@ public class PlayerScript : MonoBehaviour
                 Walk();
                 break;
         }
+
+        //Make Camera focus on player
+        Vector3 Pos = gameObject.transform.position;
+        Pos.z = -10f;
+        camera.transform.SetPositionAndRotation(Pos, gameObject.transform.rotation);
+
 
 		//for testing, not final
 		if (Input.GetKeyDown(KeyCode.F))

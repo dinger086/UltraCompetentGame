@@ -144,10 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06dbe2c01179e6844b9f64e13243d01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inWater: 0
+  camera: {fileID: 0}
   OnGroundTrigger: {fileID: 4793958247831549044}
   PlayerShape: {fileID: 5508366157497697252}
-  PlayerHead: {fileID: 0}
   swimForce: 20
   jumpPower: 0.2
 --- !u!61 &4793958247831549044
