@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class HungerMeter : MonoBehaviour
 {
+	[SerializeField]
 	Image meter;
+	[SerializeField]
 	RectTransform fx;
 	float depleteSpeed = 0.01f;
 	float fillSpeed = 1f;
@@ -15,10 +17,6 @@ public class HungerMeter : MonoBehaviour
 
 	private void Awake()
 	{
-		meter = GetComponent<Image>();
-		//again, not good coding, but avoids strange behavior when GetComponentInChildren returns the
-		// RectTransform of this object, not the child
-		fx = transform.GetChild(0).GetComponent<RectTransform>();
 
 		//not good coding, fix later
 		FindObjectOfType<PlayerScript>().FoodEaten += OnFoodEaten;
@@ -100,6 +98,6 @@ public class HungerMeter : MonoBehaviour
 	void AdjustFX()
 	{
 		//these are magic numbers and will have to change!
-		fx.anchoredPosition = new Vector2(0, Mathf.Lerp(-170f, 170f, meter.fillAmount));
+		fx.anchoredPosition = new Vector2(0, Mathf.Lerp(-200f, 200f, meter.fillAmount));
 	}
 }

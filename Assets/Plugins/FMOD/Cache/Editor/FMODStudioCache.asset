@@ -17,8 +17,26 @@ MonoBehaviour:
   lastModified: 637281824706262330
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5315267002271862264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: StrangerGameJam/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637282391731532552
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2512859658247151398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,14 +104,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 2157987383891145693}
-  - {fileID: -8334038069625957759}
+  - {fileID: -2512859658247151398}
   EditorEvents: []
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8334038069625957759}
+  - {fileID: -2512859658247151398}
   StringsBanks:
   - {fileID: 2157987383891145693}
-  stringsBankWriteTime: 637281824706272331
+  stringsBankWriteTime: 637282391731532552
   cacheVersion: 3
 --- !u!114 &2157987383891145693
 MonoBehaviour:
@@ -109,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: StrangerGameJam/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637281824706272331
+  lastModified: 637282391731532552
   LoadResult: 0
   FileSizes:
   - Name: Desktop

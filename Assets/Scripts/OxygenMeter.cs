@@ -5,18 +5,12 @@ using UnityEngine.UI;
 
 public class OxygenMeter : MonoBehaviour
 {
+	[SerializeField]
 	Image meter;
+	[SerializeField]
 	RectTransform fx;
 	float depleteSpeed = 0.03f;
 	float fillSpeed = 3f;
-
-	private void Awake()
-	{
-		meter = GetComponent<Image>();
-		//again, not good coding, but avoids strange behavior when GetComponentInChildren returns the
-		// RectTransform of this object, not the child
-		fx = transform.GetChild(0).GetComponent<RectTransform>();
-	}
 
 	public void OnWaterEntered()
 	{
@@ -56,6 +50,6 @@ public class OxygenMeter : MonoBehaviour
 
 	void AdjustFX()
 	{
-		fx.anchoredPosition = new Vector2(0, Mathf.Lerp(-170f, 170f, meter.fillAmount));
+		fx.anchoredPosition = new Vector2(0, Mathf.Lerp(-200f, 200f, meter.fillAmount));
 	}
 }

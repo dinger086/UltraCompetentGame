@@ -151,12 +151,6 @@ public class PlayerScript : MonoBehaviour
                 break;
         }
 
-        //Make Camera focus on player
-        Vector3 Pos = gameObject.transform.position;
-        Pos.z = -10f;
-        camera.transform.SetPositionAndRotation(Pos, gameObject.transform.rotation);
-
-
 		//for testing, not final
 		if (Input.GetKeyDown(KeyCode.F))
 		{
