@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Item Data")]
 public class ItemData : ScriptableObject
 {
-    
+	[SerializeField]
+	GameObject prefab;
 }

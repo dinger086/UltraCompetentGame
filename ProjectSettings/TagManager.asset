@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AirBubble
   - Platform
+  - Item
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,7 @@ public class RecipeInspector : Editor
 			EditorUtility.SetDirty(recipe);
 		}
 
+		EditorGUIUtility.labelWidth = 80;
 		for (int i = 0; i < recipe.ItemCount; i++)
 		{
 			EditorGUILayout.BeginHorizontal();
