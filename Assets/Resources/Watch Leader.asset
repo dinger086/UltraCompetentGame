@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c9035132465ab14cb718d0d561caa93, type: 3}
-  m_Name: Dive Leader
+  m_Name: Watch Leader
   m_EditorClassIdentifier: 
   swimSpeed: 1
-  holdBreath: 60
+  holdBreath: 30
   itemCraftTimeMultiplier: 1
   itemIngredientMultiplier: 1
-  itemSpawnRate: 10
+  itemSpawnRate: 20
   itemCarryLimit: 8
   foodCookTimeMultiplier: 1
   baseHealth: 100
   healSpeed: 20
   shipRoomCraftTimeMultiplier: 1
-  sightDistance: 20
-  description: The dive leader can hold their breath longer.
+  sightDistance: 40
+  description: The watch leader can see further and find more items.
+  prefab: {fileID: 0}

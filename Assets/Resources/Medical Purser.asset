@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c9035132465ab14cb718d0d561caa93, type: 3}
-  m_Name: Engineer
+  m_Name: Medical Purser
   m_EditorClassIdentifier: 
   swimSpeed: 1
   holdBreath: 30
-  itemCraftTimeMultiplier: 0.7
-  itemIngredientMultiplier: 0.7
+  itemCraftTimeMultiplier: 1
+  itemIngredientMultiplier: 1
   itemSpawnRate: 10
   itemCarryLimit: 8
   foodCookTimeMultiplier: 1
-  baseHealth: 100
-  healSpeed: 20
+  baseHealth: 125
+  healSpeed: 30
   shipRoomCraftTimeMultiplier: 1
   sightDistance: 20
-  description: The engineer can craft items more quickly using fewer ingredients.
+  description: The medical purser has more health and can heal more quickly.
+  prefab: {fileID: 0}

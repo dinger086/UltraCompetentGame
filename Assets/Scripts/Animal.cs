@@ -66,6 +66,15 @@ public class Animal : MonoBehaviour
 		else
 		{
 			targetPosition = Random.insideUnitCircle * 10f;
+			Collider2D col = Physics2D.OverlapBox(targetPosition, Vector2.one, 0);
+			if (col != null)
+			{
+				//we are trying to go inside the ship, so pick a different point
+				while (col.tag == "AirBubble")
+				{
+					targetPosition = Random.insideUnitCircle * 10f;
+				}
+			}
 		}
 	}
 

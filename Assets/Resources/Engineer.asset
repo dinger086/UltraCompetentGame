@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c9035132465ab14cb718d0d561caa93, type: 3}
-  m_Name: Diver
+  m_Name: Engineer
   m_EditorClassIdentifier: 
-  swimSpeed: 3
+  swimSpeed: 1
   holdBreath: 30
-  itemCraftTimeMultiplier: 1
-  itemIngredientMultiplier: 1
+  itemCraftTimeMultiplier: 0.7
+  itemIngredientMultiplier: 0.7
   itemSpawnRate: 10
   itemCarryLimit: 8
   foodCookTimeMultiplier: 1
@@ -23,4 +23,5 @@ MonoBehaviour:
   healSpeed: 20
   shipRoomCraftTimeMultiplier: 1
   sightDistance: 20
-  description: The diver can swim faster.
+  description: The engineer can craft items more quickly using fewer ingredients.
+  prefab: {fileID: 0}

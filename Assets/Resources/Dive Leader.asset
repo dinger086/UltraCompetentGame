@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c9035132465ab14cb718d0d561caa93, type: 3}
-  m_Name: Captain
+  m_Name: Dive Leader
   m_EditorClassIdentifier: 
   swimSpeed: 1
-  holdBreath: 30
+  holdBreath: 60
   itemCraftTimeMultiplier: 1
   itemIngredientMultiplier: 1
   itemSpawnRate: 10
@@ -21,6 +21,7 @@ MonoBehaviour:
   foodCookTimeMultiplier: 1
   baseHealth: 100
   healSpeed: 20
-  shipRoomCraftTimeMultiplier: 0.7
+  shipRoomCraftTimeMultiplier: 1
   sightDistance: 20
-  description: The captain of the ship can build improvements to the ship more quickly.
+  description: The dive leader can hold their breath longer.
+  prefab: {fileID: 0}

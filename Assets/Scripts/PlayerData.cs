@@ -8,6 +8,9 @@ public class PlayerData : BasePlayerData
 	[SerializeField]
 	string description;
 
+	[SerializeField]
+	GameObject prefab;
+
 	public float SwimSpeed
 	{
 		get { return swimSpeed; }

@@ -12,9 +12,13 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		//Make Camera focus on player
-		Vector3 Pos = player.position;
-		Pos.z = -10f;
-		transform.position = Vector3.SmoothDamp(transform.position, Pos, ref cv, 1f);
+		if (player != null)
+		{
+			//Make Camera focus on player
+			Vector3 Pos = player.position;
+			Pos.z = -10f;
+			transform.position = Vector3.SmoothDamp(transform.position, Pos, ref cv, 1f);
+		}
+		
 	}
 }

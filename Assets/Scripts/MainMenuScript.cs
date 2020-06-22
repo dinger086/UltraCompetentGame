@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    public void PlayButton() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	//changed
+    public void PlayButton() => SceneManager.LoadScene(2, LoadSceneMode.Additive);
     public void QuitButton() => Application.Quit();
 }
