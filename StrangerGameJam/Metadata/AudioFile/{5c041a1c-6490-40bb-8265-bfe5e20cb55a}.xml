@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{5c041a1c-6490-40bb-8265-bfe5e20cb55a}">
+		<property name="assetPath">
+			<value>ship-engine_start-6.22.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>29.779591836734692</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{337b49a6-10aa-4db4-ab63-a4426550de8d}</destination>
+		</relationship>
+	</object>
+</objects>

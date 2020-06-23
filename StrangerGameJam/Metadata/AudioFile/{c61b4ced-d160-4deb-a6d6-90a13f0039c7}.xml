@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{c61b4ced-d160-4deb-a6d6-90a13f0039c7}">
+		<property name="assetPath">
+			<value>footstep-metal-v2-6.21.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.88800000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{337b49a6-10aa-4db4-ab63-a4426550de8d}</destination>
+		</relationship>
+	</object>
+</objects>

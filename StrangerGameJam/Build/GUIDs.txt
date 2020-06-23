@@ -2,3 +2,8 @@
 {fbf83dba-9e07-0454-2a8d-fb940f8eef18} bank:/Master.strings
 {3343b5a4-9685-4d24-a2e8-ff6fd16869c3} bus:/
 {a4995e1e-9691-4817-9868-1d8abd938fff} bus:/Reverb
+{406a3983-2bc6-4413-a7d0-ecce89515d4d} event:/Walking
+{3f812def-3cf3-4295-96c9-deb4a6a1d306} event:/Water
+{408bd85c-a9b9-4a1b-b49c-a7248c779583} parameter:/Metal
+{83a7efc6-9a7b-45aa-bc4c-c9c69a5f01ec} parameter:/Regular
+{eeaaaa53-dbed-4aa2-b65a-9363a7128e20} parameter:/Water

@@ -6,6 +6,14 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+	public float footstepInterval = 0.5f;
+	[FMODUnity.EventRef]
+	public string footStep;
+	private float lastFootstep;
+
+	private float jumpCooldown = 0f;
+	private float jumpPause = 0.2f;
+
 	private float swimCooldown = 0f;
 	public float swimForce = 1f;
 
@@ -81,6 +89,9 @@ public class PlayerScript : MonoBehaviour
 					EnteredAir();
 				}
 
+				//Hunter: I still think this looks better and it works much smoother with the current system
+				r2d.AddForce(Vector2.up * 10f);
+
 				break;
             case "water":
                 inWater = true;
@@ -113,21 +124,13 @@ public class PlayerScript : MonoBehaviour
         {
             direction.x -= 1f;
 			//switch the direction of the character if necessary
-			if (isFacingRight)
-			{
-				isFacingRight = false;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
-			}
+			HandleDirection(false);
 		}
         if (Input.GetKey("d"))
         {
             direction.x += 1f;
 			//switch the direction of the character if necessary
-			if (!isFacingRight)
-			{
-				isFacingRight = true;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
-			}
+			HandleDirection(true);
 		}
 
         direction.Normalize();
@@ -138,6 +141,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Walk()
     {
+		Debug.Log("walking");
         float delta = Time.deltaTime;
 
 		Vector2 direction = new Vector2(0, 0);
@@ -153,21 +157,17 @@ public class PlayerScript : MonoBehaviour
 		{
 		    direction.x -= 1f;
 			//switch the direction of the character if necessary
-			if (isFacingRight)
-			{
-				isFacingRight = false;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x,180f, transform.eulerAngles.z);
-			}
+			HandleDirection(false);
+			HandleFootstep();
+			
 		}
 		if (Input.GetKey("d"))
 		{
 			direction.x += 1f;
 			//switch the direction of the character if necessary
-			if (!isFacingRight)
-			{
-				isFacingRight = true;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
-			}
+			HandleDirection(true);
+
+			HandleFootstep();
 		}
 
 		direction *= delta;
@@ -177,22 +177,108 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    private float jumpCooldown = 0f;
-    private float jumpPause = 0.2f;
+	private void HandleDirection(bool right)
+	{
+		if (right)
+		{
+			if (!isFacingRight)
+			{
+				isFacingRight = true;
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
+			}
+		}
+		else
+		{
+			if (isFacingRight)
+			{
+				isFacingRight = false;
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
+			}
+		}
+	}
+
+	private void HandleFootstep()
+	{
+		if (Time.time - lastFootstep >= footstepInterval)
+		{
+			Debug.Log("here");
+			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, .5f);
+			if (hit.transform != null)
+			{
+				Debug.Log(hit.transform.tag);
+				if (hit.transform.tag == "Platform")
+				{
+					FMOD.Studio.EventInstance fs = FMODUnity.RuntimeManager.CreateInstance(footStep);
+					if (inWater)
+					{
+						fs.setParameterByName("Water", 1f);
+						fs.setParameterByName("Metal", 1f);
+						fs.start();
+					}
+					else
+					{
+						Debug.Log("playing sound");
+						fs.setParameterByName("Water", 0f);
+						fs.setParameterByName("Metal", 1f);
+						fs.start();
+					}
+				}
+				else if (hit.transform.tag == "Ground")
+				{
+					FMOD.Studio.EventInstance fs = FMODUnity.RuntimeManager.CreateInstance(footStep);
+					if (inWater)
+					{
+						fs.setParameterByName("Water", 1f);
+						fs.setParameterByName("Regular", 1f);
+						fs.start();
+					}
+					else
+					{
+						fs.setParameterByName("Water", 0f);
+						fs.setParameterByName("Regular", 1f);
+						fs.start();
+					}
+				}
+				lastFootstep = Time.time;
+			}
+			
+			
+		}
+	}
+
+	
 
     private void Update()
     {
         jumpCooldown -= Time.deltaTime;
 
-        switch (inWater)
+		//the platform or ground layers
+		if (OnGroundTrigger.IsTouchingLayers(LayerMask.GetMask("Ground","Platform")))
 		{
-            case true:
-                Swim();
-                break;
-            case false:
-                Walk();
-                break;
-        }
+			onGround = true;
+		}
+		else
+		{
+			onGround = false;
+		}
+
+		//Debug.Log(onGround);
+
+		if (inWater)
+		{
+			if (!onGround)
+			{
+				Swim();
+			}
+			else
+			{
+				Walk();
+			}
+		}
+		else
+		{
+			Walk();
+		}
 
 		//for testing, not final
 		if (Input.GetKeyDown(KeyCode.F))
@@ -228,6 +314,7 @@ public class PlayerScript : MonoBehaviour
 	}
 
     public float jumpPower;
+
     private void Jump()
     {
         if (jumpCooldown <= 0 &&onGround)

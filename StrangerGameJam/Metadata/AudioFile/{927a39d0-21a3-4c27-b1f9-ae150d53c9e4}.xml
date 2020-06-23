@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
-	<object class="AudioFile" id="{bd64142f-0b24-4eb4-a10e-e8573886b485}">
+	<object class="AudioFile" id="{927a39d0-21a3-4c27-b1f9-ae150d53c9e4}">
 		<property name="assetPath">
-			<value>cheer2.ogg</value>
+			<value>footstep-metal-v1-6.21.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>4.3712291666666667</value>
+			<value>0.83999999999999997</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{337b49a6-10aa-4db4-ab63-a4426550de8d}</destination>
