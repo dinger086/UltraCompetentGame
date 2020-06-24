@@ -105,7 +105,7 @@ public class Animal : MonoBehaviour
 				//we are trying to go inside the ship, so pick a different point
 				while (col.tag == "AirBubble" || col.tag == "Ground" || col.tag == "Platform")
 				{
-					Debug.Log("stuck in animal collision");
+					//Debug.Log("stuck in animal collision");
 					r = Random.insideUnitCircle * 10f;
 					rand = new Vector3(r.x, r.y, 0f);
 					targetPosition = transform.position + rand;
@@ -129,7 +129,7 @@ public class Animal : MonoBehaviour
 				{
 					while (hit.transform.tag == "AirBubble" || hit.transform.tag == "Ground" || hit.transform.tag == "Platform")
 					{
-						Debug.Log("stuck in animal ray cast");
+						//Debug.Log("stuck in animal ray cast");
 						r = Random.insideUnitCircle * 10f;
 						rand = new Vector3(r.x, r.y, 0f);
 						targetPosition = transform.position + rand;

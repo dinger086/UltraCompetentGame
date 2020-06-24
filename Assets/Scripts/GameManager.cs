@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 			//we should notify the systems that require this information
 			//animal/resource spawners, crafting system, the player object
 
-			GameObject player = Instantiate(playerPrefab, new Vector3(0, 1.1f, 0), Quaternion.identity);
+			GameObject player = Instantiate(playerPrefab, new Vector3(-4, 2.5f, 0), Quaternion.identity);
 			PlayerScript ps = player.GetComponent<PlayerScript>();
 
 			ps.swimForce = playerData.SwimSpeed * 20f;

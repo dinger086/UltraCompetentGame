@@ -35,7 +35,7 @@ public class AnimalSpawner : MonoBehaviour
 					while (col != null && (col.tag == "AirBubble" || col.tag == "Ground" || col.tag == "Platform"))
 					{
 
-					Debug.Log("stuck in spawner");
+					//Debug.Log("stuck in spawner");
 						pos = Random.insideUnitCircle * 10f;
 						//without this it causes a potentially infinite loop, of course
 						col = Physics2D.OverlapBox(pos, Vector2.one, 0);
