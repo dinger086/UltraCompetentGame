@@ -6,20 +6,19 @@ using UnityEngine;
 public class Show : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-		FindObjectOfType<PlayerScript>().EnteredAir += OnEnteredAir;
-		FindObjectOfType<PlayerScript>().EnteredWater += OnEnteredWater;
+		
 
 		gameObject.SetActive(false);
 	}
 
-	private void OnEnteredWater()
+	public void OnEnteredWater()
 	{
 		gameObject.SetActive(false);
 	}
 
-	private void OnEnteredAir()
+	public void OnEnteredAir()
 	{
 		gameObject.SetActive(true);
 	}

@@ -20,6 +20,8 @@ public class Animal : MonoBehaviour
 	public delegate void AnimalDeathHandler(Animal a);
 	public event AnimalDeathHandler AnimalDied;
 
+	List<Transform> neighbors = new List<Transform>();
+
 	private enum AnimalState
 	{
 		Wander,
@@ -33,6 +35,7 @@ public class Animal : MonoBehaviour
 
 	private void OnEnable()
 	{
+		neighbors = new List<Transform>();
 		r2d = gameObject.GetComponent<Rigidbody2D>();
 		state = AnimalState.Wander;
 	}

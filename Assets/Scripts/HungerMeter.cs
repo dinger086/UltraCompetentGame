@@ -15,11 +15,14 @@ public class HungerMeter : MonoBehaviour
 
 	Coroutine depletion;
 
+	public delegate void HungerHandler();
+	public event HungerHandler Starved;
+
 	private void Awake()
 	{
 
 		//not good coding, fix later
-		FindObjectOfType<PlayerScript>().FoodEaten += OnFoodEaten;
+		
 
 		//start the depletion
 		depletion = StartCoroutine(Deplete());
@@ -43,7 +46,7 @@ public class HungerMeter : MonoBehaviour
 		
 	//}
 
-	private void OnFoodEaten(float amt)
+	public void OnFoodEaten(float amt)
 	{
 		Debug.Log("food");
 		StartCoroutine(Fill(amt));
@@ -57,6 +60,14 @@ public class HungerMeter : MonoBehaviour
 				AdjustFX();
 				yield return null;
 			}
+
+		if (meter.fillAmount <= 0)
+		{
+			if (Starved != null)
+			{
+				Starved();
+			}
+		}
 	}
 
 	IEnumerator Fill(float amt)

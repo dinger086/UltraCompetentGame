@@ -48,6 +48,9 @@ public class PlayerScript : MonoBehaviour
 
 	public delegate void InventoryHandler(ItemData item);
 	public event InventoryHandler AddItem;
+
+
+
 	//public event InventoryHandler CloseInventory;
 
 	//for making shure the entire player body is inside an air buble, will probably not work too well with konvex shapes as im just testing the 4 corners 1
@@ -71,7 +74,7 @@ public class PlayerScript : MonoBehaviour
 		GetComponentInChildren<InventoryTrigger>().ItemSelected += OnItemSelected;
 		GetComponentInChildren<InventoryTrigger>().ItemUnselected += OnItemUnselected;
 
-		Enter("water");
+		//Enter("water");
 
 		FindObjectOfType<Inventory>().RegisterPlayer(this);
     }
@@ -85,6 +88,11 @@ public class PlayerScript : MonoBehaviour
 	{
 		//Debug.Log(i.itemData.name);
 		currentSelectedItem = i;
+	}
+
+	public void OnStarved()
+	{
+		//we're dead from starvation
 	}
 
 	public void Enter(string key)

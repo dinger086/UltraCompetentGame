@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 	PlayerData playerData;
+	public GameObject playerPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +26,28 @@ public class GameManager : MonoBehaviour
 			PlayerData[] data = Resources.LoadAll<PlayerData>("");
 			playerData = data[Random.Range(0, data.Length)];
 			Debug.Log(playerData.name);
-			
+
 			//we should notify the systems that require this information
 			//animal/resource spawners, crafting system, the player object
 
+			GameObject player = Instantiate(playerPrefab, new Vector3(0, 1.1f, 0), Quaternion.identity);
+			PlayerScript ps = player.GetComponent<PlayerScript>();
+
+			ps.swimForce = playerData.SwimSpeed;
+			ps.maxInventoryCount = playerData.ItemCarryLimit;
+
+			//again not good coding style
+			ps.EnteredAir += FindObjectOfType<Show>().OnEnteredAir;
+			ps.EnteredWater += FindObjectOfType<Show>().OnEnteredWater;
+
+			ps.FoodEaten += FindObjectOfType<HungerMeter>().OnFoodEaten;
+			FindObjectOfType<HungerMeter>().Starved += ps.OnStarved;
+
+
+			CraftingStation cs = FindObjectOfType<CraftingStation>();
+			cs.foodBaseSpeed = playerData.FoodCookSpeedMultiplier;
+			cs.shipBaseSpeed = playerData.ShipRoomCraftTimeMultiplier;
+			cs.itemBaseSpeed = playerData.ItemCraftTimeMultiplier;
 		}
 	}
 

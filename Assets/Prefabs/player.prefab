@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 219767729}
   m_Layer: 0
   m_Name: Visuals
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1721460438}
   - component: {fileID: 1721460437}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 262422301196878729}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,8 +303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06dbe2c01179e6844b9f64e13243d01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  footstepInterval: 0.3
+  footStep: event:/Walking
   swimForce: 20
-  maxInventoryCount: 0
+  maxInventoryCount: 8
   OnGroundTrigger: {fileID: 1721460437}
   PlayerShape: {fileID: 219767729}
   jumpPower: 0.2
