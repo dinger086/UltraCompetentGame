@@ -36,6 +36,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7353003718373549043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: StrangerGameJam/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637286171505961584
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-5315267002271862264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +72,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-5155203020243668224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WaterEntry
+  m_EditorClassIdentifier: 
+  Path: event:/WaterEntry
+  guid: 99f53ae4d735ef46a3176f43740ad03d
+  Banks:
+  - {fileID: -7353003718373549043}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &-3522165836320117390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,14 +110,14 @@ MonoBehaviour:
   Path: event:/Walking
   guid: 83396a40c62b1344a7d0ecce89515d4d
   Banks:
-  - {fileID: 6123649042913870882}
+  - {fileID: -7353003718373549043}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -1800745448739355006}
-  - {fileID: 1349979144184037787}
-  - {fileID: 5158044684022533428}
+  - {fileID: -280149166544810676}
+  - {fileID: 2736947902360259927}
+  - {fileID: -1732665743153763547}
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
@@ -98,6 +139,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2028779643748931979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/BGM
+  guid: ef2d813ff33c954296c9deb4a6a1d306
+  Banks:
+  - {fileID: -7353003718373549043}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 48048
 --- !u!114 &-1800745448739355006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +175,23 @@ MonoBehaviour:
   m_Name: parameter:/Walking/Regular
   m_EditorClassIdentifier: 
   Name: Regular
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-1732665743153763547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Metal
+  m_EditorClassIdentifier: 
+  Name: Metal
   Min: 0
   Max: 1
   Default: 0
@@ -150,6 +231,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-280149166544810676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Regular
+  m_EditorClassIdentifier: 
+  Name: Regular
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-47938585092851037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,16 +280,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 2157987383891145693}
-  - {fileID: 6123649042913870882}
+  - {fileID: -7353003718373549043}
   EditorEvents:
   - {fileID: -3522165836320117390}
-  - {fileID: 2279717631058302011}
+  - {fileID: 3799223794194915976}
+  - {fileID: -5155203020243668224}
+  - {fileID: -2028779643748931979}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 6123649042913870882}
+  - {fileID: -7353003718373549043}
   StringsBanks:
   - {fileID: 2157987383891145693}
-  stringsBankWriteTime: 637285420393614372
+  stringsBankWriteTime: 637286171505981532
   cacheVersion: 3
 --- !u!114 &381214609761763614
 MonoBehaviour:
@@ -243,7 +343,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2157987383891145693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,11 +358,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: StrangerGameJam/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637285420393614372
+  lastModified: 637286171505981532
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 912
+    Value: 1008
   Exists: 1
 --- !u!114 &2279717631058302011
 MonoBehaviour:
@@ -278,8 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Water
   guid: ef2d813ff33c954296c9deb4a6a1d306
-  Banks:
-  - {fileID: 6123649042913870882}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -287,6 +386,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 48048
+--- !u!114 &2736947902360259927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Water
+  m_EditorClassIdentifier: 
+  Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &3110483167109702379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +420,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &3799223794194915976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WaterExit
+  m_EditorClassIdentifier: 
+  Path: event:/WaterExit
+  guid: 52954b15e880944e90f6659568c7e274
+  Banks:
+  - {fileID: -7353003718373549043}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &4020194954798956962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +476,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6123649042913870882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,7 +494,7 @@ MonoBehaviour:
   lastModified: 637285420393594409
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8544284349533198598
 MonoBehaviour:
   m_ObjectHideFlags: 0

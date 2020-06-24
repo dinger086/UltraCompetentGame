@@ -305,6 +305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepInterval: 0.3
   footStep: event:/Walking
+  waterEntry: event:/WaterEntry
+  waterExit: event:/WaterExit
   swimForce: 20
   maxInventoryCount: 8
   OnGroundTrigger: {fileID: 1721460437}

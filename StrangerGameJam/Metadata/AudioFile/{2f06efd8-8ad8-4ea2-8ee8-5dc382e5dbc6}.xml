@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{2f06efd8-8ad8-4ea2-8ee8-5dc382e5dbc6}">
+		<property name="assetPath">
+			<value>water-exit-6.23.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8.9861224489795912</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{337b49a6-10aa-4db4-ab63-a4426550de8d}</destination>
+		</relationship>
+	</object>
+</objects>

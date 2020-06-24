@@ -11,6 +11,12 @@ public class PlayerScript : MonoBehaviour
 	public string footStep;
 	private float lastFootstep;
 
+	[FMODUnity.EventRef]
+	public string waterEntry;
+
+	[FMODUnity.EventRef]
+	public string waterExit;
+
 	private float jumpCooldown = 0f;
 	private float jumpPause = 0.2f;
 
@@ -104,6 +110,8 @@ public class PlayerScript : MonoBehaviour
                 r2d.drag = 0.4f;
                 r2d.gravityScale = 1f;
 
+				FMODUnity.RuntimeManager.PlayOneShot(waterExit);
+
 				if (EnteredAir != null)
 				{
 					EnteredAir();
@@ -117,7 +125,10 @@ public class PlayerScript : MonoBehaviour
                 inWater = true;
                 r2d.drag = 2f;
                 r2d.gravityScale = 0.1f;
-                onGround = true;
+				//onGround = true;
+
+				FMODUnity.RuntimeManager.PlayOneShot(waterEntry);
+
 				if (EnteredWater != null)
 				{
 					EnteredWater();
