@@ -33,12 +33,14 @@ public class GameManager : MonoBehaviour
 			GameObject player = Instantiate(playerPrefab, new Vector3(0, 1.1f, 0), Quaternion.identity);
 			PlayerScript ps = player.GetComponent<PlayerScript>();
 
-			ps.swimForce = playerData.SwimSpeed;
+			ps.swimForce = playerData.SwimSpeed * 20f;
 			ps.maxInventoryCount = playerData.ItemCarryLimit;
 
 			//again not good coding style
 			ps.EnteredAir += FindObjectOfType<Show>().OnEnteredAir;
 			ps.EnteredWater += FindObjectOfType<Show>().OnEnteredWater;
+
+			FindObjectOfType<Ship>().RegisterPlayer(ps);
 
 			ps.FoodEaten += FindObjectOfType<HungerMeter>().OnFoodEaten;
 			FindObjectOfType<HungerMeter>().Starved += ps.OnStarved;
