@@ -6,6 +6,19 @@ public class Animal : MonoBehaviour
 {
 	private Rigidbody2D r2d;
 	private float speed = 2f;
+	private bool isFacingRight = false;
+
+	private float attackDelay = 3f;
+
+	private float lifeTime;
+
+	private float health;
+
+	private float expectedTravelTime;
+	private float currentTravelTime;
+
+	public delegate void AnimalDeathHandler(Animal a);
+	public event AnimalDeathHandler AnimalDied;
 
 	private enum AnimalState
 	{
@@ -18,20 +31,20 @@ public class Animal : MonoBehaviour
 	Transform targetObject;
 	Vector3 targetPosition;
 
-	private void Awake()
+	private void OnEnable()
 	{
 		r2d = gameObject.GetComponent<Rigidbody2D>();
 		state = AnimalState.Wander;
 	}
 
 	// Start is called before the first frame update
-	void Start()
+	private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	private void Update()
     {
 		switch (state)
 		{
@@ -49,37 +62,126 @@ public class Animal : MonoBehaviour
 		}
 	}
 
-	void Flee()
+	public void ReceiveDamage(float amt)
+	{
+		//we're dead
+		if (health-amt <= 0)
+		{
+			if (AnimalDied != null)
+			{
+				AnimalDied(this);
+			}
+		}
+	}
+
+	private void Flee()
 	{
 
 	}
 
-	void Wander()
+	private void Wander()
 	{
-		if (Vector3.Distance(transform.position, targetPosition) > 0.2f)
+		if (Vector3.Distance(transform.position, targetPosition) > 0.2f && currentTravelTime < expectedTravelTime)
 		{
 			Vector2 direction = targetPosition - transform.position;
 			direction.Normalize();
 			direction *= speed * Time.deltaTime;
 			r2d.AddForce(direction, ForceMode2D.Force);
+			HandleDirection(direction.x > 0f);
+			currentTravelTime += Time.deltaTime;
 		}
 		else
 		{
-			targetPosition = Random.insideUnitCircle * 10f;
+			Vector2 r = Random.insideUnitCircle * 10f;
+			Vector3 rand = new Vector3(r.x, r.y, 0f);
+			targetPosition = transform.position + rand;
+			//Debug.Log(targetPosition);
 			Collider2D col = Physics2D.OverlapBox(targetPosition, Vector2.one, 0);
 			if (col != null)
 			{
 				//we are trying to go inside the ship, so pick a different point
-				while (col.tag == "AirBubble")
+				while (col.tag == "AirBubble" || col.tag == "Ground" || col.tag == "Platform")
 				{
-					targetPosition = Random.insideUnitCircle * 10f;
+
+					r = Random.insideUnitCircle * 10f;
+					rand = new Vector3(r.x, r.y, 0f);
+					targetPosition = transform.position + rand;
+					//without this it causes a potentially infinite loop, of course
+					col = Physics2D.OverlapBox(targetPosition, Vector2.one, 0);
+
+					//avoids null errors
+					if (col == null)
+					{
+						break;
+					}
 				}
+
+				Vector2 direction = targetPosition - transform.position;
+				float distance = direction.magnitude;
+				direction.Normalize();
+
+				//we also don't want to deal with 2D pathfinding, so just avoid traveling through ground, platform, etc
+				RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one, 0f, direction, distance);
+				if (hit.transform != null)
+				{
+					while (hit.transform.tag == "AirBubble" || hit.transform.tag == "Ground" || hit.transform.tag == "Platform")
+					{
+
+						r = Random.insideUnitCircle * 10f;
+						rand = new Vector3(r.x, r.y, 0f);
+						targetPosition = transform.position + rand;
+
+						hit = Physics2D.BoxCast(transform.position, Vector2.one, 0f, direction, distance);
+						
+						//gets out of potentially infinite loop
+						if (hit.transform == null)
+						{
+							break;
+						}
+					}
+				}
+
+			}
+			// we should finally have a valid position
+			expectedTravelTime = Vector2.Distance(transform.position, targetPosition) / speed;
+			currentTravelTime = 0f;
+		}
+	}
+
+	private void HandleDirection(bool right)
+	{
+		if (right)
+		{
+			if (!isFacingRight)
+			{
+				isFacingRight = true;
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
+			}
+		}
+		else
+		{
+			if (isFacingRight)
+			{
+				isFacingRight = false;
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
 			}
 		}
 	}
 
-	void Attack()
+	private void Attack()
 	{
 
 	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.tag == "Monster")
+		{
+			state = AnimalState.Flee;
+			targetObject = collision.transform;
+		}
+	}
+
+
+
 }

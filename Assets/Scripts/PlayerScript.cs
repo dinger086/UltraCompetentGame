@@ -40,8 +40,18 @@ public class PlayerScript : MonoBehaviour
 	public event HealthHandler Healed;
 	public event HealthHandler Damaged;
 
-    //for making shure the entire player body is inside an air buble, will probably not work too well with konvex shapes as im just testing the 4 corners 1
-    private Vector2 size;
+
+	//for sending events to health meter
+	//public delegate void InventoryHandler(List<ItemData> inventory);
+	//public event InventoryHandler OpenInventory;
+	//public event InventoryHandler CloseInventory;
+
+	public delegate void InventoryHandler(ItemData item);
+	public event InventoryHandler AddItem;
+	//public event InventoryHandler CloseInventory;
+
+	//for making shure the entire player body is inside an air buble, will probably not work too well with konvex shapes as im just testing the 4 corners 1
+	private Vector2 size;
     [SerializeField]
     BoxCollider2D OnGroundTrigger;
     [SerializeField]
@@ -62,6 +72,8 @@ public class PlayerScript : MonoBehaviour
 		GetComponentInChildren<InventoryTrigger>().ItemUnselected += OnItemUnselected;
 
 		Enter("water");
+
+		FindObjectOfType<Inventory>().RegisterPlayer(this);
     }
 
 	private void OnItemUnselected(Item i)
@@ -71,7 +83,7 @@ public class PlayerScript : MonoBehaviour
 
 	private void OnItemSelected(Item i)
 	{
-		Debug.Log(i.itemData.name);
+		//Debug.Log(i.itemData.name);
 		currentSelectedItem = i;
 	}
 
@@ -141,7 +153,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Walk()
     {
-		Debug.Log("walking");
+		//Debug.Log("walking");
         float delta = Time.deltaTime;
 
 		Vector2 direction = new Vector2(0, 0);
@@ -201,11 +213,11 @@ public class PlayerScript : MonoBehaviour
 	{
 		if (Time.time - lastFootstep >= footstepInterval)
 		{
-			Debug.Log("here");
+			//Debug.Log("here");
 			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, .5f);
 			if (hit.transform != null)
 			{
-				Debug.Log(hit.transform.tag);
+				//Debug.Log(hit.transform.tag);
 				if (hit.transform.tag == "Platform")
 				{
 					FMOD.Studio.EventInstance fs = FMODUnity.RuntimeManager.CreateInstance(footStep);
@@ -217,7 +229,7 @@ public class PlayerScript : MonoBehaviour
 					}
 					else
 					{
-						Debug.Log("playing sound");
+						//Debug.Log("playing sound");
 						fs.setParameterByName("Water", 0f);
 						fs.setParameterByName("Metal", 1f);
 						fs.start();
@@ -289,6 +301,12 @@ public class PlayerScript : MonoBehaviour
 			}
 		}
 
+		////for testing, not final
+		//if (Input.GetKeyDown(KeyCode.I))
+		//{
+
+		//}
+
 		//for testing, not final
 		if (Input.GetKeyDown(KeyCode.E))
 		{
@@ -299,9 +317,14 @@ public class PlayerScript : MonoBehaviour
 				{
 					
 					inventory.Add(currentSelectedItem.itemData);
-					Debug.Log("Adding Item");
-					Debug.Log(inventory.Count);
-					Debug.Log(inventory[inventory.Count - 1].name);
+					//Debug.Log("Adding Item");
+					//Debug.Log(inventory.Count);
+					//Debug.Log(inventory[inventory.Count - 1].name);
+
+					if (AddItem != null)
+					{
+						AddItem(currentSelectedItem.itemData);
+					}
 
 					//if we do this before, we get errors!
 					currentSelectedItem.gameObject.SetActive(false);

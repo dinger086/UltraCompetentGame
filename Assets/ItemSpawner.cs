@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimalSpawner : MonoBehaviour
+public class ItemSpawner : MonoBehaviour
 {
-	public GameObject animalPrefab;
+	public GameObject itemPrefab;
 	public float interval;
 	int count = 0;
 	int max = 30;
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
-		//SimplePool.
 		StartCoroutine(Spawn());
-    }
+	}
 
     // Update is called once per frame
     void Update()
@@ -28,7 +27,7 @@ public class AnimalSpawner : MonoBehaviour
 		{
 			if (count < max)
 			{
-				Vector2 pos = Random.insideUnitCircle * 10f;
+				Vector2 pos = new Vector2(Random.Range(-20,20),20);
 
 				Collider2D col = Physics2D.OverlapBox(pos, Vector2.one, 0);
 				if (col != null)
@@ -37,7 +36,7 @@ public class AnimalSpawner : MonoBehaviour
 					while (col.tag == "AirBubble" || col.tag == "Ground" || col.tag == "Platform")
 					{
 
-						pos = Random.insideUnitCircle * 10f;
+						pos = new Vector2(Random.Range(-20, 20), 20);
 						//without this it causes a potentially infinite loop, of course
 						col = Physics2D.OverlapBox(pos, Vector2.one, 0);
 
@@ -51,19 +50,12 @@ public class AnimalSpawner : MonoBehaviour
 
 				count++;
 				Debug.Log(count);
-				(SimplePool.Spawn(animalPrefab, pos, Quaternion.identity)).GetComponent<Animal>().AnimalDied += OnAnimalKilled;
+				SimplePool.Spawn(itemPrefab, pos, Quaternion.identity);
 			}
-			
+
 
 			yield return new WaitForSeconds(interval);
 		}
-		
-	}
 
-	void OnAnimalKilled(Animal a)
-	{
-		count--;
-		//to avoid resubscribing and receiving double or triple event calls
-		a.AnimalDied -= OnAnimalKilled;
 	}
 }
