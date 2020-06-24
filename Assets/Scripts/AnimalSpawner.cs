@@ -48,7 +48,7 @@ public class AnimalSpawner : MonoBehaviour
 					}
 
 				count++;
-				Debug.Log(count);
+				//Debug.Log(count);
 				(SimplePool.Spawn(animalPrefab, pos, Quaternion.identity)).GetComponent<Animal>().AnimalDied += OnAnimalKilled;
 			}
 			

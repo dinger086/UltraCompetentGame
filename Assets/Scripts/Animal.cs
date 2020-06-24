@@ -156,6 +156,12 @@ public class Animal : MonoBehaviour
 
 	private void HandleDirection(bool right)
 	{
+		transform.right = -r2d.velocity.normalized;
+		//transform.rotation = Quaternion.Slerp(transform.rotation,
+		//	Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, Vector2.Angle(-transform.right, r2d.velocity) - 180f),Time.deltaTime);
+		//transform.rotation = Quaternion.RotateTowards(transform.rotation,
+		//	Quaternion.Euler(transform.eulerAngles.x, 0, Vector2.Angle(-transform.right, r2d.velocity)),10f);
+
 		if (right)
 		{
 			if (!isFacingRight)
@@ -185,6 +191,24 @@ public class Animal : MonoBehaviour
 		{
 			state = AnimalState.Flee;
 			targetObject = collision.transform;
+		}
+		else if (collision.tag == "Animal")
+		{
+			//let's align
+			neighbors.Add(collision.transform);
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.tag == "Monster")
+		{
+			state = AnimalState.Wander;
+		}
+		else if (collision.tag == "Animal")
+		{
+			//let's align
+			neighbors.Remove(collision.transform);
 		}
 	}
 
