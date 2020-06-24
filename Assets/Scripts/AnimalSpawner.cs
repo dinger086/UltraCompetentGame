@@ -31,12 +31,11 @@ public class AnimalSpawner : MonoBehaviour
 				Vector2 pos = Random.insideUnitCircle * 10f;
 
 				Collider2D col = Physics2D.OverlapBox(pos, Vector2.one, 0);
-				if (col != null)
-				{
-					//we are trying to go inside the ship, so pick a different point
-					while (col.tag == "AirBubble" || col.tag == "Ground" || col.tag == "Platform")
+				//we are trying to go inside the ship, so pick a different point
+					while (col != null && (col.tag == "AirBubble" || col.tag == "Ground" || col.tag == "Platform"))
 					{
 
+					Debug.Log("stuck in spawner");
 						pos = Random.insideUnitCircle * 10f;
 						//without this it causes a potentially infinite loop, of course
 						col = Physics2D.OverlapBox(pos, Vector2.one, 0);
@@ -47,7 +46,6 @@ public class AnimalSpawner : MonoBehaviour
 							break;
 						}
 					}
-				}
 
 				count++;
 				Debug.Log(count);

@@ -10011,13 +10011,14 @@ GameObject:
   - component: {fileID: 618437456}
   - component: {fileID: 618437455}
   - component: {fileID: 618437454}
+  - component: {fileID: 618437459}
   m_Layer: 5
   m_Name: ShipInventoryPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &618437453
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10035,7 +10036,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 685, y: 180}
+  m_SizeDelta: {x: 0, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &618437454
 MonoBehaviour:
@@ -10124,6 +10125,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618437452}
   m_CullTransparentMesh: 0
+--- !u!114 &618437459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618437452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24049ab18ceb734cbbcb78ac915af45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &727852138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8035858976939819675, guid: c9f913b193894404490cceccdd9e0022,
@@ -10719,7 +10732,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250077551}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5985bc78caa557c40933cfb77eab1dcd, type: 3}
   m_Name: 
