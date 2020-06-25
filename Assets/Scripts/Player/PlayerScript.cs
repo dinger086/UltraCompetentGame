@@ -31,7 +31,7 @@ public class PlayerScript : MonoBehaviour
 	private Rigidbody2D r2d;
     private bool onGround = false;
     private bool inWater = false;
-	private bool isFacingRight = false;
+	private bool isFacingRight = true;
 
 	//for sending events to the oxygen meter
 	public delegate void OxygenHandler();
@@ -158,7 +158,7 @@ public class PlayerScript : MonoBehaviour
         direction.Normalize();
         direction *= swimForce*delta;
 
-		Debug.Log(direction);
+		//Debug.Log(direction);
         r2d.AddForce(direction, ForceMode2D.Force);
 
     }
@@ -208,7 +208,7 @@ public class PlayerScript : MonoBehaviour
 			if (!isFacingRight)
 			{
 				isFacingRight = true;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
 			}
 		}
 		else
@@ -216,7 +216,7 @@ public class PlayerScript : MonoBehaviour
 			if (isFacingRight)
 			{
 				isFacingRight = false;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
 			}
 		}
 	}
@@ -272,36 +272,29 @@ public class PlayerScript : MonoBehaviour
 
 	private void IsGrounded()
 	{
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f);
+		RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position - (Vector2.down/2f), Vector2.down, 1f,LayerMask.GetMask("Platform","Ground"));
 		if (hit.transform !=null)
 		{
-			if (hit.transform.tag == "Ground" || hit.transform.tag == "Platform")
-			{
-				onGround = true;
-			}
-			else
-			{
-				onGround = false;
-			}
+			Debug.Log(hit.transform.tag);
+			
+			onGround = true;
+			
 		}
-		onGround = false;
+		else
+		{
+			onGround = false;
+		}
+		
 	}
 
     private void Update()
     {
         jumpCooldown -= Time.deltaTime;
 
-		//the platform or ground layers
-		//if (OnGroundTrigger.IsTouchingLayers(LayerMask.GetMask("Ground","Platform")))
-		//{
-		//	onGround = true;
-		//}
-		//else
-		//{
-		//	onGround = false;
-		//}
 
-		Debug.Log(onGround);
+		IsGrounded();
+
+		//Debug.Log(onGround);
 
 		if (inWater)
 		{
@@ -367,6 +360,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Jump()
     {
+		//Debug.Log("jump");
         if (jumpCooldown <= 0 &&onGround)
         {
             r2d.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
