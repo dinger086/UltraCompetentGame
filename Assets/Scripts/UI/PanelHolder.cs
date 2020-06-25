@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceSpawner : MonoBehaviour
+public class PanelHolder : MonoBehaviour
 {
+	public GameObject craftingPanel;
+	public GameObject deathPanel;
     // Start is called before the first frame update
     void Start()
     {

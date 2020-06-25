@@ -9,6 +9,11 @@ public class CameraFollow : MonoBehaviour
 
 	Vector3 cv;
 
+	public void RegisterPlayer(Transform p)
+	{
+		player = p;
+	}
+
     // Update is called once per frame
     void Update()
     {

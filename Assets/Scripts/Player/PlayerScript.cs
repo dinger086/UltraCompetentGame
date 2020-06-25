@@ -71,26 +71,25 @@ public class PlayerScript : MonoBehaviour
     {
         r2d = gameObject.GetComponent<Rigidbody2D>();
 
-		//not good coding, but doing this to avoid messing with script execution order or setting
-		//up a static messaging class
-		EnteredAir += FindObjectOfType<OxygenMeter>().OnAirEntered;
-		EnteredWater += FindObjectOfType<OxygenMeter>().OnWaterEntered;
-        size = PlayerShape.size;
+		
 
-		GetComponentInChildren<InventoryTrigger>().ItemSelected += OnItemSelected;
-		GetComponentInChildren<InventoryTrigger>().ItemUnselected += OnItemUnselected;
 
-		//Enter("water");
+		size = PlayerShape.size;
 
-		FindObjectOfType<Inventory>().RegisterPlayer(this);
+		
     }
 
-	private void OnItemUnselected(Item i)
+	public void OnOxygenDepleted()
+	{
+		//we've run out of air
+	}
+
+	public void OnItemUnselected(Item i)
 	{
 		currentSelectedItem = null;
 	}
 
-	private void OnItemSelected(Item i)
+	public void OnItemSelected(Item i)
 	{
 		//Debug.Log(i.itemData.name);
 		currentSelectedItem = i;

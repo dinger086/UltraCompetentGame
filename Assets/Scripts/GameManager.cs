@@ -31,8 +31,13 @@ public class GameManager : MonoBehaviour
 			//animal/resource spawners, crafting system, the player object
 
 			GameObject player = Instantiate(playerPrefab, new Vector3(-4, 2.5f, 0), Quaternion.identity);
+
+			//register with the camera
+			FindObjectOfType<CameraFollow>().RegisterPlayer(player.transform);
+
 			PlayerScript ps = player.GetComponent<PlayerScript>();
 
+			//set up player information
 			ps.swimForce = playerData.SwimSpeed * 20f;
 			ps.maxInventoryCount = playerData.ItemCarryLimit;
 
@@ -40,22 +45,35 @@ public class GameManager : MonoBehaviour
 			ps.EnteredAir += FindObjectOfType<Show>().OnEnteredAir;
 			ps.EnteredWater += FindObjectOfType<Show>().OnEnteredWater;
 
+			//let the ship know when we enter and exit
 			FindObjectOfType<Ship>().RegisterPlayer(ps);
 
+
+			//set up the survival mechanics
 			ps.FoodEaten += FindObjectOfType<HungerMeter>().OnFoodEaten;
 			FindObjectOfType<HungerMeter>().Starved += ps.OnStarved;
 
+			GetComponentInChildren<InventoryTrigger>().ItemSelected += ps.OnItemSelected;
+			GetComponentInChildren<InventoryTrigger>().ItemUnselected += ps.OnItemUnselected;
 
+			//not good coding, but doing this to avoid messing with script execution order or setting
+			//up a static messaging class
+			ps.EnteredAir += FindObjectOfType<OxygenMeter>().OnAirEntered;
+			ps.EnteredWater += FindObjectOfType<OxygenMeter>().OnWaterEntered;
+			FindObjectOfType<OxygenMeter>().OxygenDepleted += ps.OnOxygenDepleted;
+
+			//Enter("water");
+
+			FindObjectOfType<Inventory>().RegisterPlayer(ps);
+
+			//set up crafting
 			CraftingStation cs = FindObjectOfType<CraftingStation>();
 			cs.foodBaseSpeed = playerData.FoodCookSpeedMultiplier;
 			cs.shipBaseSpeed = playerData.ShipRoomCraftTimeMultiplier;
 			cs.itemBaseSpeed = playerData.ItemCraftTimeMultiplier;
+
+
 		}
 	}
 
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
 }

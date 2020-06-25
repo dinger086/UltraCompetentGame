@@ -9,8 +9,12 @@ public class OxygenMeter : MonoBehaviour
 	Image meter;
 	[SerializeField]
 	RectTransform fx;
-	float depleteSpeed = 0.03f;
+	//default is set to 30 seconds
+	public float depleteSpeed = 0.0333f;
 	float fillSpeed = 3f;
+
+	public delegate void OxygenDepletionHandler();
+	public event OxygenDepletionHandler OxygenDepleted;
 
 	public void OnWaterEntered()
 	{
@@ -44,6 +48,14 @@ public class OxygenMeter : MonoBehaviour
 				meter.fillAmount += Time.deltaTime * fillSpeed;
 				AdjustFX();
 				yield return null;
+			}
+		}
+
+		if (meter.fillAmount <= 0)
+		{
+			if (OxygenDepleted != null)
+			{
+				OxygenDepleted();
 			}
 		}
 	}
