@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-	public GameObject itemPrefab;
+	public GameObject[] itemPrefab;
 	public float interval;
 	int count = 0;
 	int max = 30;
@@ -50,7 +50,7 @@ public class ItemSpawner : MonoBehaviour
 
 				count++;
 				Debug.Log(count);
-				SimplePool.Spawn(itemPrefab, pos, Quaternion.identity);
+				SimplePool.Spawn(itemPrefab[Random.Range(0,itemPrefab.Length)], pos, Quaternion.identity);
 			}
 
 

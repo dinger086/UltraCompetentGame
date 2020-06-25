@@ -40,6 +40,8 @@ public class PlayerScript : MonoBehaviour
     private bool inWater = false;
 	private bool isFacingRight = true;
 
+
+
 	//for sending events to the oxygen meter
 	public delegate void OxygenHandler();
 	public event OxygenHandler EnteredAir;
@@ -71,7 +73,12 @@ public class PlayerScript : MonoBehaviour
 	//we should use this for making sure the player is inside the air bubble, we don't need an extra vector2
     BoxCollider2D PlayerShape;
 
-    private void Awake()
+	public void OnItemRemoved(ItemData item)
+	{
+		inventory.Remove(item);
+	}
+
+	private void Awake()
     {
         r2d = gameObject.GetComponent<Rigidbody2D>();
 

@@ -10,15 +10,38 @@ public class IngredientHolder : MonoBehaviour
 	public Toggle[] toggles;
 	Recipe currentRecipe;
 	public Button craftingButton;
-    // Start is called before the first frame update
-    void Start()
+	public Image craftingButtonImage;
+	public Inventory inventory;
+	// Start is called before the first frame update
+	void Start()
     {
 		foreach (var item in toggles)
 		{
 			
 			item.onValueChanged.AddListener((bool b) => { UpdateRecipe(b, item.GetComponent<CraftingRecipe>().recipe); });
 		}
+
+		craftingButton.onClick.AddListener(Craft);
     }
+
+	private void Craft()
+	{
+		StartCoroutine(Timer(currentRecipe.CraftingTime));
+	}
+
+	IEnumerator Timer(float craftingTime)
+	{
+		float t = 0;
+		while (t < craftingTime)
+		{
+			t += Time.deltaTime;
+			craftingButtonImage.fillAmount = t / craftingTime;
+			yield return null;
+		}
+
+		inventory.AddItem(currentRecipe.Product);
+
+	}
 
 	private void UpdateRecipe(bool b, Recipe r)
 	{
@@ -27,12 +50,6 @@ public class IngredientHolder : MonoBehaviour
 			currentRecipe = r;
 		}
 	}
-
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
 
 	public void Add(ItemData itemData)
 	{
@@ -61,5 +78,11 @@ public class IngredientHolder : MonoBehaviour
 
 			craftingButton.interactable = true;
 		}
+	}
+
+	public void Remove(ItemData itemData)
+	{
+		currentIngredients.Remove(itemData);
+		CheckIngredients();
 	}
 }

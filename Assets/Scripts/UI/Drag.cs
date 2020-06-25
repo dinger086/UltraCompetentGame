@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Drag : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
 	Vector2 original;
+	public GameObject inventory;
 	public GameObject craftingIngredientHolder;
 	public ItemData itemData;
 	public void OnBeginDrag(PointerEventData eventData)
@@ -22,12 +23,19 @@ public class Drag : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHand
 	{
 		(transform as RectTransform).anchoredPosition = original;
 
-		RectTransform invPanel = craftingIngredientHolder.GetComponent<RectTransform>();
-		if (!RectTransformUtility.RectangleContainsScreenPoint(invPanel, Input.mousePosition))
+		RectTransform ingredientPanel = craftingIngredientHolder.GetComponent<RectTransform>();
+		RectTransform inventoryPanel = inventory.GetComponent<RectTransform>();
+		if (RectTransformUtility.RectangleContainsScreenPoint(ingredientPanel, Input.mousePosition))
 		{
 			//Debug
 			transform.SetParent(craftingIngredientHolder.transform);
+			inventory.GetComponent<Inventory>().RemoveItem(gameObject, itemData);
 			craftingIngredientHolder.GetComponent<IngredientHolder>().Add(itemData);
+		}
+		else if (RectTransformUtility.RectangleContainsScreenPoint(inventoryPanel, Input.mousePosition))
+		{
+			transform.SetParent(inventoryPanel.transform);
+			craftingIngredientHolder.GetComponent<IngredientHolder>().Remove(itemData);
 		}
 	}
 }

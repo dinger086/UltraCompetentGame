@@ -10,6 +10,9 @@ public class Inventory : MonoBehaviour
 	public GameObject itemPrefab;
 	List<GameObject> items = new List<GameObject>();
 	int maxHorizontalItems = 8;
+
+	public delegate void ItemHandler(ItemData item);
+	public event ItemHandler ItemRemoved;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,7 @@ public class Inventory : MonoBehaviour
 
 		GetComponent<GridLayoutGroup>().constraintCount = temp;
 		ps.AddItem += OnItemAdded;
+		ItemRemoved += ps.OnItemRemoved;
 	}
 
 	private void OnItemAdded(ItemData item)
@@ -41,5 +45,22 @@ public class Inventory : MonoBehaviour
 		items.Add(go);
 		go.GetComponent<Drag>().craftingIngredientHolder = craftingIngredientHolder;
 		go.GetComponentInChildren<Text>().text = item.name;
+	}
+
+	public void AddItem(ItemData item)
+	{
+		GameObject go = Instantiate(itemPrefab, transform);
+		items.Add(go);
+		go.GetComponent<Drag>().craftingIngredientHolder = craftingIngredientHolder;
+		go.GetComponentInChildren<Text>().text = item.name;
+	}
+
+	public void RemoveItem(GameObject item, ItemData data)
+	{
+		items.Remove(item);
+		if (ItemRemoved != null)
+		{
+			ItemRemoved(data);
+		}
 	}
 }

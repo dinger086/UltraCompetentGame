@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class CraftingStation : MonoBehaviour
 {
@@ -8,14 +11,21 @@ public class CraftingStation : MonoBehaviour
 	public float itemBaseSpeed = 1f;
 	public float shipBaseSpeed = 1f;
 	public GameObject craftingPanel;
+
+	public Button craftingButton;
 	// Start is called before the first frame update
 	void Start()
     {
-        
+		craftingButton.onClick.AddListener(Craft);
     }
 
-    // Update is called once per frame
-    void Update()
+	private void Craft()
+	{
+		
+	}
+
+	// Update is called once per frame
+	void Update()
     {
         
     }
