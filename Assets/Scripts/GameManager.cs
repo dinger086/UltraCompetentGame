@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 			//we should notify the systems that require this information
 			//animal/resource spawners, crafting system, the player object
 
-			GameObject player = Instantiate(playerPrefab, new Vector3(-4, 2.5f, 0), Quaternion.identity);
+			GameObject player = Instantiate(playerPrefab, new Vector3(-2.3f, 3.2f, 0), Quaternion.identity);
 
 			//register with the camera
 			FindObjectOfType<CameraFollow>().RegisterPlayer(player.transform);
@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
 				item.RegisterPlayer(ps);
 			}
 
+			ps.Enter("air");
 
 			//set up the survival mechanics
 			ps.FoodEaten += FindObjectOfType<HungerMeter>().OnFoodEaten;
@@ -80,7 +81,7 @@ public class GameManager : MonoBehaviour
 
 			DeathPanel dp = FindObjectOfType<PanelHolder>().deathPanel.GetComponent<DeathPanel>();
 			dp.restart.onClick.AddListener(Restart);
-			dp.mainMenu.onClick.AddListener(Main);
+			dp.mainMenu.onClick.AddListener(ReturnToMainMenu);
 		}
 	}
 
@@ -91,7 +92,7 @@ public class GameManager : MonoBehaviour
 		SceneManager.LoadScene(2, LoadSceneMode.Additive);
 	}
 
-	public void Main()
+	public void ReturnToMainMenu()
 	{
 
 		SceneManager.LoadScene(1, LoadSceneMode.Additive);

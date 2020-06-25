@@ -1,0 +1,1040 @@
+fileFormatVersion: 2
+guid: a7f03f8f1c8ebfc4fa0c138e7d7c5b6c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 532934885854595868
+    second: GreenDiverSwim_0
+  - first:
+      213: 2138042340532063333
+    second: GreenDiverSwim_1
+  - first:
+      213: -5043670610178466777
+    second: GreenDiverSwim_2
+  - first:
+      213: 152595261736203363
+    second: GreenDiverSwim_3
+  - first:
+      213: -3368208953681233864
+    second: GreenDiverSwim_4
+  - first:
+      213: -7096166960813261235
+    second: GreenDiverSwim_5
+  - first:
+      213: -4407409551631723684
+    second: GreenDiverSwim_6
+  - first:
+      213: 8274581326308205725
+    second: GreenDiverSwim_7
+  - first:
+      213: -1074791061327421798
+    second: GreenDiverSwim_8
+  - first:
+      213: 7806957193216771482
+    second: GreenDiverSwim_9
+  - first:
+      213: -784352523123926690
+    second: GreenDiverSwim_10
+  - first:
+      213: -5192526582234343329
+    second: GreenDiverSwim_11
+  - first:
+      213: -5822567850499845931
+    second: GreenDiverSwim_12
+  - first:
+      213: 2356705562563418050
+    second: GreenDiverSwim_13
+  - first:
+      213: 6463353051033419859
+    second: GreenDiverSwim_14
+  - first:
+      213: -561184155722034990
+    second: GreenDiverSwim_15
+  - first:
+      213: 7028864410319054989
+    second: GreenDiverSwim_16
+  - first:
+      213: 3550282587377852043
+    second: GreenDiverSwim_17
+  - first:
+      213: 8974709881747977674
+    second: GreenDiverSwim_18
+  - first:
+      213: 8391678849438248570
+    second: GreenDiverSwim_19
+  - first:
+      213: -1450243354642824810
+    second: GreenDiverSwim_20
+  - first:
+      213: 994812491675371526
+    second: GreenDiverSwim_21
+  - first:
+      213: -5868048058097958350
+    second: GreenDiverSwim_22
+  - first:
+      213: -1661490605032990541
+    second: GreenDiverSwim_23
+  - first:
+      213: 1449216876175189630
+    second: GreenDiverSwim_24
+  - first:
+      213: 1912968268526074732
+    second: GreenDiverSwim_25
+  - first:
+      213: 8785216292678969924
+    second: GreenDiverSwim_26
+  - first:
+      213: 3676742109289799249
+    second: GreenDiverSwim_27
+  - first:
+      213: -7118375531033273143
+    second: GreenDiverSwim_28
+  - first:
+      213: 3226628245700500630
+    second: GreenDiverSwim_29
+  - first:
+      213: -2089152291542927051
+    second: GreenDiverSwim_30
+  - first:
+      213: 2709012393442116249
+    second: GreenDiverSwim_31
+  - first:
+      213: -3552113357157857743
+    second: GreenDiverSwim_32
+  - first:
+      213: 9204266272212843951
+    second: GreenDiverSwim_33
+  - first:
+      213: 1464805240957867141
+    second: GreenDiverSwim_34
+  - first:
+      213: 6662665643934502228
+    second: GreenDiverSwim_35
+  - first:
+      213: -5687374710721124046
+    second: GreenDiverSwim_36
+  - first:
+      213: 6915370664160559227
+    second: GreenDiverSwim_37
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GreenDiverSwim_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1846
+        width: 347
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1bc6cf747d556700800000000000000
+      internalID: 532934885854595868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_1
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1846
+        width: 348
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c882e4e2adbad10800000000000000
+      internalID: 2138042340532063333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_2
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 1846
+        width: 347
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c1c347d48410ab0800000000000000
+      internalID: -5043670610178466777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_3
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 1867
+        width: 341
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364b13205902e1200800000000000000
+      internalID: 152595261736203363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_4
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1895
+        width: 329
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8383a8a5dc7b141d0800000000000000
+      internalID: -3368208953681233864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1667
+        width: 319
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ebcd90fb9558d90800000000000000
+      internalID: -7096166960813261235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_6
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1667
+        width: 307
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53d35f3d5cb5d2c0800000000000000
+      internalID: -4407409551631723684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_7
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1667
+        width: 303
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d946eab20e735d270800000000000000
+      internalID: 8274581326308205725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_8
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1667
+        width: 290
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e50d569339511f0800000000000000
+      internalID: -1074791061327421798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_9
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 1632
+        width: 276
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95cd564432e75c60800000000000000
+      internalID: 7806957193216771482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_10
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1409
+        width: 275
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e595480398b6d15f0800000000000000
+      internalID: -784352523123926690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_11
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1409
+        width: 274
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58162ba59070f7b0800000000000000
+      internalID: -5192526582234343329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_12
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1409
+        width: 273
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0d856a365123fa0800000000000000
+      internalID: -5822567850499845931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_13
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1422
+        width: 268
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c797c80933b4b020800000000000000
+      internalID: 2356705562563418050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_14
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1437
+        width: 268
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350c8c80b5172b950800000000000000
+      internalID: 6463353051033419859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_15
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1217
+        width: 259
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d05c90dbf54638f0800000000000000
+      internalID: -561184155722034990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_16
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1217
+        width: 257
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88e37fc0fa8b8160800000000000000
+      internalID: 7028864410319054989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_17
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1217
+        width: 263
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e59e8f333254130800000000000000
+      internalID: 3550282587377852043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_18
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1217
+        width: 275
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5b6cf56139c8c70800000000000000
+      internalID: 8974709881747977674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_19
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1177
+        width: 301
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7eece9d37b357470800000000000000
+      internalID: 8391678849438248570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_20
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 954
+        width: 327
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691c4a84a53bfdbe0800000000000000
+      internalID: -1450243354642824810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_21
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 954
+        width: 352
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6088e60c0b84ecd00800000000000000
+      internalID: 994812491675371526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_22
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 954
+        width: 355
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2328624a161809ea0800000000000000
+      internalID: -5868048058097958350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_23
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 975
+        width: 353
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b81c51091331f8e0800000000000000
+      internalID: -1661490605032990541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_24
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 1003
+        width: 350
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e766ce21217ac1410800000000000000
+      internalID: 1449216876175189630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 775
+        width: 352
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b3710418a3c8a10800000000000000
+      internalID: 1912968268526074732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_26
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 775
+        width: 351
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44aaa101cab5be970800000000000000
+      internalID: 8785216292678969924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_27
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 775
+        width: 350
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e50fad779660330800000000000000
+      internalID: 3676742109289799249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_28
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 775
+        width: 350
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccdde65b23763d90800000000000000
+      internalID: -7118375531033273143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_29
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 740
+        width: 349
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c58374b4947cc20800000000000000
+      internalID: 3226628245700500630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_30
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 517
+        width: 348
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539f3e44f07d103e0800000000000000
+      internalID: -2089152291542927051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_31
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 517
+        width: 348
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9928f3b3b68589520800000000000000
+      internalID: 2709012393442116249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_32
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 517
+        width: 347
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1368fa8b8bb54bec0800000000000000
+      internalID: -3552113357157857743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_33
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 530
+        width: 343
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadfa55886f1cbf70800000000000000
+      internalID: 9204266272212843951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_34
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 545
+        width: 343
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5849c641b98045410800000000000000
+      internalID: 1464805240957867141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_35
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 325
+        width: 334
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d4ae35a1b867c50800000000000000
+      internalID: 6662665643934502228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_36
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 325
+        width: 334
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2396de665d26211b0800000000000000
+      internalID: -5687374710721124046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenDiverSwim_37
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 325
+        width: 333
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b708277daf458ff50800000000000000
+      internalID: 6915370664160559227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

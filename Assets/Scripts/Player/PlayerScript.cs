@@ -19,6 +19,7 @@ public class PlayerScript : MonoBehaviour
 
 	private float jumpCooldown = 0f;
 	private float jumpPause = 0.2f;
+	public float jumpPower;
 
 	private float swimCooldown = 0f;
 	public float swimForce = 1f;
@@ -30,7 +31,7 @@ public class PlayerScript : MonoBehaviour
 	private Rigidbody2D r2d;
     private bool onGround = false;
     private bool inWater = false;
-	private bool isFacingRight = true;
+	private bool isFacingRight = false;
 
 	//for sending events to the oxygen meter
 	public delegate void OxygenHandler();
@@ -59,10 +60,6 @@ public class PlayerScript : MonoBehaviour
 
 	//public event InventoryHandler CloseInventory;
 
-	//for making shure the entire player body is inside an air buble, will probably not work too well with konvex shapes as im just testing the 4 corners 1
-	private Vector2 size;
-    [SerializeField]
-    BoxCollider2D OnGroundTrigger;
     [SerializeField]
 	//we should use this for making sure the player is inside the air bubble, we don't need an extra vector2
     BoxCollider2D PlayerShape;
@@ -71,12 +68,7 @@ public class PlayerScript : MonoBehaviour
     {
         r2d = gameObject.GetComponent<Rigidbody2D>();
 
-		
-
-
-		size = PlayerShape.size;
-
-		
+		//Enter("air");
     }
 
 	public void OnOxygenDepleted()
@@ -165,6 +157,8 @@ public class PlayerScript : MonoBehaviour
 
         direction.Normalize();
         direction *= swimForce*delta;
+
+		Debug.Log(direction);
         r2d.AddForce(direction, ForceMode2D.Force);
 
     }
@@ -201,8 +195,8 @@ public class PlayerScript : MonoBehaviour
 		}
 
 		direction *= delta;
-        
-        r2d.AddForce(direction*20f, ForceMode2D.Force);
+		Debug.Log("walking " + direction);
+		r2d.AddForce(direction*20f, ForceMode2D.Force);
         
 
     }
@@ -214,7 +208,7 @@ public class PlayerScript : MonoBehaviour
 			if (!isFacingRight)
 			{
 				isFacingRight = true;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
 			}
 		}
 		else
@@ -222,7 +216,7 @@ public class PlayerScript : MonoBehaviour
 			if (isFacingRight)
 			{
 				isFacingRight = false;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
 			}
 		}
 	}
@@ -276,23 +270,38 @@ public class PlayerScript : MonoBehaviour
 		}
 	}
 
-	
+	private void IsGrounded()
+	{
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f);
+		if (hit.transform !=null)
+		{
+			if (hit.transform.tag == "Ground" || hit.transform.tag == "Platform")
+			{
+				onGround = true;
+			}
+			else
+			{
+				onGround = false;
+			}
+		}
+		onGround = false;
+	}
 
     private void Update()
     {
         jumpCooldown -= Time.deltaTime;
 
 		//the platform or ground layers
-		if (OnGroundTrigger.IsTouchingLayers(LayerMask.GetMask("Ground","Platform")))
-		{
-			onGround = true;
-		}
-		else
-		{
-			onGround = false;
-		}
+		//if (OnGroundTrigger.IsTouchingLayers(LayerMask.GetMask("Ground","Platform")))
+		//{
+		//	onGround = true;
+		//}
+		//else
+		//{
+		//	onGround = false;
+		//}
 
-		//Debug.Log(onGround);
+		Debug.Log(onGround);
 
 		if (inWater)
 		{
@@ -354,7 +363,7 @@ public class PlayerScript : MonoBehaviour
 		}
 	}
 
-    public float jumpPower;
+ 
 
     private void Jump()
     {
@@ -371,41 +380,23 @@ public class PlayerScript : MonoBehaviour
     {
         switch (collision.gameObject.tag) {
             case "AirBubble":
-                
-                Vector3 worldPos = transform.TransformPoint(PlayerShape.offset);
-                
-                float top = worldPos.y + (size.y / 2f);
-                float btm = worldPos.y - (size.y / 2f);
-                float left = worldPos.x - (size.x / 2f);
-                float right = worldPos.x + (size.x / 2f);
 
-                Vector2 topLeft = new Vector3(left, top);
-                Vector2 topRight = new Vector3(right, top);
-                Vector2 btmLeft = new Vector3(left, btm);
-                Vector2 btmRight = new Vector3(right, btm);
+
 
 				//we can do it this way
-				//Vector2 topLeft = new Vector3(PlayerShape.bounds.min.x, PlayerShape.bounds.max.y);
-				//Vector2 topRight = new Vector3(PlayerShape.bounds.max.x, PlayerShape.bounds.max.y);
-				//Vector2 bottomLeft = new Vector3(PlayerShape.bounds.min.x, PlayerShape.bounds.min.y);
-				//Vector2 bottomRight = new Vector3(PlayerShape.bounds.max.x, PlayerShape.bounds.min.y);
+				Vector2 topLeft = new Vector3(PlayerShape.bounds.min.x, PlayerShape.bounds.max.y);
+				Vector2 topRight = new Vector3(PlayerShape.bounds.max.x, PlayerShape.bounds.max.y);
+				Vector2 bottomLeft = new Vector3(PlayerShape.bounds.min.x, PlayerShape.bounds.min.y);
+				Vector2 bottomRight = new Vector3(PlayerShape.bounds.max.x, PlayerShape.bounds.min.y);
 
 
 				if (collision.OverlapPoint(topLeft)&& 
                     collision.OverlapPoint(topRight)&& 
-                    collision.OverlapPoint(btmLeft)&&
-                    collision.OverlapPoint(btmRight)&&inWater)
+                    collision.OverlapPoint(bottomLeft) &&
+                    collision.OverlapPoint(bottomRight) &&inWater)
                 {
                     Enter("air");
                 }
-                
-                break;
-            case "Platform":
-                if (!inWater&&collision.IsTouching(OnGroundTrigger))
-                {
-                    onGround = true;
-                }
-
                 break;
         }
     }

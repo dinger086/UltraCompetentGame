@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8035858976939819674}
-  - component: {fileID: 8035858976939819673}
-  m_Layer: 0
+  - component: {fileID: 727852139}
+  m_Layer: 11
   m_Name: AirBubble
   m_TagString: AirBubble
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &8035858976939819673
+--- !u!60 &727852139
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ PolygonCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -56,8 +56,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.3301704, y: 1.0118622}
-      - {x: -2.8060522, y: 0.5671909}
-      - {x: -2.9694152, y: -0.6961467}
-      - {x: 1.9558094, y: -0.7309197}
-      - {x: 1.5520618, y: 0.4919498}
+    - - {x: 0.011461265, y: 1.8099992}
+      - {x: -2.3324833, y: 2.8164983}
+      - {x: -3.5627587, y: 2.8243628}
+      - {x: -4.4336147, y: 2.1029587}
+      - {x: -11.914579, y: 2.154508}
+      - {x: -12.713058, y: -0.4299456}
+      - {x: -12.272174, y: -2.692723}
+      - {x: -11.219156, y: -3.0427942}
+      - {x: -8.629322, y: -3.1905062}
+      - {x: -7.4162445, y: -3.1713777}
+      - {x: -6.8099, y: -3.664651}
+      - {x: -5.7753315, y: -3.9612496}
+      - {x: -1.3738647, y: -3.6167698}
+      - {x: -0.1126331, y: -3.3164713}
+      - {x: 0.6509288, y: -2.4791572}
+      - {x: 3.7110212, y: -2.0760028}
+      - {x: 7.0658054, y: -1.1988833}
+      - {x: 6.983818, y: 0.29080907}
