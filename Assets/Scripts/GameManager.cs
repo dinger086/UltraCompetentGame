@@ -45,8 +45,12 @@ public class GameManager : MonoBehaviour
 			ps.EnteredAir += FindObjectOfType<Show>().OnEnteredAir;
 			ps.EnteredWater += FindObjectOfType<Show>().OnEnteredWater;
 
-			//let the ship know when we enter and exit water
-			FindObjectOfType<Ship>().RegisterPlayer(ps);
+			//let the ship and distoration layer know when we enter and exit water
+			ShipAndDistortion[] sad = FindObjectsOfType<ShipAndDistortion>();
+			foreach (var item in sad)
+			{
+				item.RegisterPlayer(ps);
+			}
 
 
 			//set up the survival mechanics
