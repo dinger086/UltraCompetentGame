@@ -17,15 +17,23 @@ public class GameManager : MonoBehaviour
 
 	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
-		//this is the level scene,
-		//we want to pick a player type
+		//this is the story scene
 		if (scene.buildIndex == 2)
 		{
+			//unload the main menu
 			SceneManager.UnloadSceneAsync(1);
-			// load them
+
+			//we want to pick a player type
 			PlayerData[] data = Resources.LoadAll<PlayerData>("");
 			playerData = data[Random.Range(0, data.Length)];
 			Debug.Log(playerData.name);
+
+		} //this is the level scene,
+		else if (scene.buildIndex == 3)
+		{
+			
+			//unload the story
+			SceneManager.UnloadSceneAsync(2);
 
 			//we should notify the systems that require this information
 			//animal/resource spawners, crafting system, the player object
@@ -88,14 +96,14 @@ public class GameManager : MonoBehaviour
 
 	public void Restart()
 	{
-		SceneManager.UnloadSceneAsync(2);
-		SceneManager.LoadScene(2, LoadSceneMode.Additive);
+		SceneManager.UnloadSceneAsync(3);
+		SceneManager.LoadScene(3, LoadSceneMode.Additive);
 	}
 
 	public void ReturnToMainMenu()
 	{
 
 		SceneManager.LoadScene(1, LoadSceneMode.Additive);
-		SceneManager.UnloadSceneAsync(2);
+		SceneManager.UnloadSceneAsync(3);
 	}
 }
