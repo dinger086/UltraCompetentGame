@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+	public	PlayerData[] data;
 	PlayerData playerData;
 	public GameObject playerPrefab;
     // Start is called before the first frame update
@@ -24,9 +25,12 @@ public class GameManager : MonoBehaviour
 			SceneManager.UnloadSceneAsync(1);
 
 			//we want to pick a player type
-			PlayerData[] data = Resources.LoadAll<PlayerData>("");
+			//PlayerData[] data = Resources.LoadAll<PlayerData>("");
 			playerData = data[Random.Range(0, data.Length)];
 			Debug.Log(playerData.name);
+
+			FindObjectOfType<StoryText>().story.text = playerData.description;
+			FindObjectOfType<StoryText>().next.onClick.AddListener(Continue);
 
 		} //this is the level scene,
 		else if (scene.buildIndex == 3)
@@ -54,11 +58,11 @@ public class GameManager : MonoBehaviour
 			ps.EnteredWater += FindObjectOfType<Show>().OnEnteredWater;
 
 			//let the ship and distoration layer know when we enter and exit water
-			ShipAndDistortion[] sad = FindObjectsOfType<ShipAndDistortion>();
-			foreach (var item in sad)
-			{
-				item.RegisterPlayer(ps);
-			}
+			Ship ship = FindObjectOfType<Ship>();
+			
+			ship.RegisterPlayer(ps);
+
+			FindObjectOfType<Distortion>().RegisterPlayer(ps);
 
 			ps.Enter("air");
 
@@ -91,6 +95,11 @@ public class GameManager : MonoBehaviour
 			dp.restart.onClick.AddListener(Restart);
 			dp.mainMenu.onClick.AddListener(ReturnToMainMenu);
 		}
+	}
+
+	public void Continue()
+	{
+		SceneManager.LoadScene(3, LoadSceneMode.Additive);
 	}
 
 

@@ -10,13 +10,15 @@ public class MainMenuScript : MonoBehaviour
 	public string startSound;
 	//changed
 	public Animator title;
+	public Animator bg;
 	public Animator play;
 	public Animator quit;
 
 	private void Awake()
 	{
-
-		Invoke("ShowTitle", 2f);
+		bg.SetFloat("Speed", .25f);
+		bg.SetTrigger("FadeIn");
+		Invoke("ShowTitle", 12f);
 	}
 
 	private void ShowTitle()
@@ -37,12 +39,13 @@ public class MainMenuScript : MonoBehaviour
 		title.SetTrigger("FadeOut");
 		play.SetTrigger("FadeOut");
 		quit.SetTrigger("FadeOut");
-		Invoke("Load", 1f);
+		Invoke("Load", 3f);
 	}
 
 	private void Load()
 	{
 		SceneManager.LoadScene(2, LoadSceneMode.Additive);
 	}
+
     public void QuitButton() => Application.Quit();
 }

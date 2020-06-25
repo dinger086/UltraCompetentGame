@@ -5,8 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Player Data")]
 public class PlayerData : BasePlayerData
 {
-	[SerializeField]
-	string description;
+	public string description;
 
 	[SerializeField]
 	GameObject prefab;

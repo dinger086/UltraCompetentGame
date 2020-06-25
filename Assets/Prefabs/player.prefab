@@ -249,7 +249,7 @@ MonoBehaviour:
   footStep: event:/Walking
   waterEntry: event:/WaterEntry
   waterExit: event:/WaterExit
-  jumpPower: 1
+  jumpPower: 0.5
   swimForce: 20
   maxInventoryCount: 8
   PlayerShape: {fileID: 219767729}

@@ -23,5 +23,9 @@ MonoBehaviour:
   healSpeed: 20
   shipRoomCraftTimeMultiplier: 0.7
   sightDistance: 20
-  description: The captain of the ship can build improvements to the ship more quickly.
+  description: "~9\xB0N, 29\xB0W, depth 440m:  \u2026captain\u2026 Captain. You\u2019re
+    awake. How long have you been asleep, here?  The ship you command is quiet, non-functional.
+    Your fellow crew, what\u2019s left of them, are in suspension. You\u2019re in
+    charge, as usual. You need to fix this ship and gather the raw materials to power
+    it back to the surface.  Something is out there. Best do it fast. "
   prefab: {fileID: 0}

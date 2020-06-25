@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c9035132465ab14cb718d0d561caa93, type: 3}
-  m_Name: Medical Purser
+  m_Name: Doctor
   m_EditorClassIdentifier: 
   swimSpeed: 1
   holdBreath: 30
@@ -23,5 +23,9 @@ MonoBehaviour:
   healSpeed: 30
   shipRoomCraftTimeMultiplier: 1
   sightDistance: 20
-  description: The medical purser has more health and can heal more quickly.
+  description: "~9\xB0N, 29\xB0W, depth 440m:  \u2026doctor\u2026 Doctor. You\u2019re
+    awake. How long have you been asleep, here?  The ship you serve is quiet, non-functional.
+    Your fellow crew, what\u2019s left of them, are in suspension. Med school didn\u2019t
+    prepare you for this. You need to fix this ship and gather the raw materials
+    to power it back to the surface.  Something is out there. Best do it fast. "
   prefab: {fileID: 0}

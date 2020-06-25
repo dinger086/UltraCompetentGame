@@ -23,5 +23,9 @@ MonoBehaviour:
   healSpeed: 20
   shipRoomCraftTimeMultiplier: 1
   sightDistance: 20
-  description: The engineer can craft items more quickly using fewer ingredients.
+  description: "~9\xB0N, 29\xB0W, depth 440m:  \u2026engineer\u2026 Engineer. You\u2019re
+    awake. How long have you been asleep, here?  The ship you serve is quiet, non-functional.
+    Your fellow crew, what\u2019s left of them, are in suspension. Probably one of
+    them that got us in this mess. You need to fix this ship and gather the raw materials
+    to power it back to the surface.  Something is out there. Best do it fast. "
   prefab: {fileID: 0}

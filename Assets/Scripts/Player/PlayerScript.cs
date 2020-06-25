@@ -387,8 +387,9 @@ public class PlayerScript : MonoBehaviour
 				if (collision.OverlapPoint(topLeft)&& 
                     collision.OverlapPoint(topRight)&& 
                     collision.OverlapPoint(bottomLeft) &&
-                    collision.OverlapPoint(bottomRight) &&inWater)
+                    collision.OverlapPoint(bottomRight) && inWater)
                 {
+					Debug.Log("entered air");
                     Enter("air");
                 }
                 break;
