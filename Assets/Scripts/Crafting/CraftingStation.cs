@@ -7,6 +7,7 @@ public class CraftingStation : MonoBehaviour
 	public float foodBaseSpeed = 1f;
 	public float itemBaseSpeed = 1f;
 	public float shipBaseSpeed = 1f;
+	public GameObject craftingPanel;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -25,6 +26,7 @@ public class CraftingStation : MonoBehaviour
 		if (collision.tag == "Player")
 		{
 			Debug.Log("crafting enabled");
+			craftingPanel.SetActive(true);
 		}
 	}
 
@@ -32,6 +34,7 @@ public class CraftingStation : MonoBehaviour
 	{
 		if (collision.tag == "Player")
 		{
+			craftingPanel.SetActive(false);
 			Debug.Log("crafting disabled");
 		}
 	}

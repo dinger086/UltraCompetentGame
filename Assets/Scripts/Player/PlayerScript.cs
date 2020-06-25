@@ -17,6 +17,13 @@ public class PlayerScript : MonoBehaviour
 	[FMODUnity.EventRef]
 	public string waterExit;
 
+	[FMODUnity.EventRef]
+	public string waterAmbient;
+	FMOD.Studio.EventInstance water;
+
+	[FMODUnity.EventRef]
+	public string thump;
+
 	private float jumpCooldown = 0f;
 	private float jumpPause = 0.2f;
 	public float jumpPower;
@@ -108,6 +115,13 @@ public class PlayerScript : MonoBehaviour
 					EnteredAir();
 				}
 
+				FMOD.Studio.PLAYBACK_STATE state;
+				water.getPlaybackState(out state);
+				if (state != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+				{
+					water.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+				}
+
 				//Hunter: I still think this looks better and it works much smoother with the current system
 				r2d.AddForce(Vector2.up * 10f);
 
@@ -125,6 +139,13 @@ public class PlayerScript : MonoBehaviour
 					EnteredWater();
 				}
 
+
+				water.getPlaybackState(out state);
+				if (state != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+				{
+					water = FMODUnity.RuntimeManager.CreateInstance(waterAmbient);
+					water.start();
+				}
                 break;
 
         }
@@ -276,8 +297,13 @@ public class PlayerScript : MonoBehaviour
 		if (hit.transform !=null)
 		{
 			Debug.Log(hit.transform.tag);
+
+			if (!onGround)
+			{
+				onGround = true;
+				FMODUnity.RuntimeManager.PlayOneShot(thump);
+			}
 			
-			onGround = true;
 			
 		}
 		else

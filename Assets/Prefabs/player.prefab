@@ -249,6 +249,8 @@ MonoBehaviour:
   footStep: event:/Walking
   waterEntry: event:/WaterEntry
   waterExit: event:/WaterExit
+  waterAmbient: event:/Underwater-Ambience
+  thump: event:/Thud
   jumpPower: 0.5
   swimForce: 20
   maxInventoryCount: 8

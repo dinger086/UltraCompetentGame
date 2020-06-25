@@ -8,6 +8,8 @@
 {6bd0e46e-9ba0-4a2b-b8ad-f3aa0870f2f0} event:/Kraken
 {4dfad41e-f88a-43ca-819a-c44f8c9e5b9f} event:/StartButton
 {778f5bea-c03e-44a2-af3b-5178f93d995c} event:/Submarine
+{c951a5f7-06f0-47ff-bd04-1d513c69ab81} event:/Thud
+{08cbca4c-519b-4628-9591-36b5a54624c8} event:/Underwater-Ambience
 {406a3983-2bc6-4413-a7d0-ecce89515d4d} event:/Walking
 {e43af599-35d7-46ef-a317-6f43740ad03d} event:/WaterEntry
 {154b9552-80e8-4e94-90f6-659568c7e274} event:/WaterExit

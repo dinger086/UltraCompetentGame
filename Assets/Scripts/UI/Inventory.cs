@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+	public GameObject craftingIngredientHolder;
 	public GameObject itemPrefab;
 	List<GameObject> items = new List<GameObject>();
 	int maxHorizontalItems = 8;
@@ -38,6 +39,7 @@ public class Inventory : MonoBehaviour
 	{
 		GameObject go = Instantiate(itemPrefab, transform);
 		items.Add(go);
+		go.GetComponent<Drag>().craftingIngredientHolder = craftingIngredientHolder;
 		go.GetComponentInChildren<Text>().text = item.name;
 	}
 }
