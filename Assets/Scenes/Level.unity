@@ -11459,6 +11459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be4fe575a67da545927810c1d2e4e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meter: {fileID: 920579911}
+  fx: {fileID: 1577434008}
 --- !u!114 &920579911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17954,6 +17956,7 @@ GameObject:
   - component: {fileID: 1816093579}
   - component: {fileID: 1816093581}
   - component: {fileID: 1816093580}
+  - component: {fileID: 1816093582}
   m_Layer: 5
   m_Name: DeathPanel
   m_TagString: Untagged
@@ -18020,6 +18023,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816093578}
   m_CullTransparentMesh: 0
+--- !u!114 &1816093582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816093578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e68caf225ed4840a36953d27c6ecbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 737660420}
+  restart: {fileID: 1442549325}
 --- !u!4 &1819418910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 801584345053857030, guid: 8ac1d7eb1e06d8147ac0958369203b03,

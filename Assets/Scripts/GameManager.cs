@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 			ps.EnteredAir += FindObjectOfType<Show>().OnEnteredAir;
 			ps.EnteredWater += FindObjectOfType<Show>().OnEnteredWater;
 
-			//let the ship know when we enter and exit
+			//let the ship know when we enter and exit water
 			FindObjectOfType<Ship>().RegisterPlayer(ps);
 
 
@@ -53,16 +53,18 @@ public class GameManager : MonoBehaviour
 			ps.FoodEaten += FindObjectOfType<HungerMeter>().OnFoodEaten;
 			FindObjectOfType<HungerMeter>().Starved += ps.OnStarved;
 
-			GetComponentInChildren<InventoryTrigger>().ItemSelected += ps.OnItemSelected;
-			GetComponentInChildren<InventoryTrigger>().ItemUnselected += ps.OnItemUnselected;
-
 			//not good coding, but doing this to avoid messing with script execution order or setting
 			//up a static messaging class
-			ps.EnteredAir += FindObjectOfType<OxygenMeter>().OnAirEntered;
-			ps.EnteredWater += FindObjectOfType<OxygenMeter>().OnWaterEntered;
-			FindObjectOfType<OxygenMeter>().OxygenDepleted += ps.OnOxygenDepleted;
+			OxygenMeter om = FindObjectOfType<OxygenMeter>();
+			ps.EnteredAir += om.OnAirEntered;
+			ps.EnteredWater += om.OnWaterEntered;
+			om.OxygenDepleted += ps.OnOxygenDepleted;
+			om.depleteSpeed = 1f / playerData.HoldBreath;
 
-			//Enter("water");
+			//setup item detection
+			player.GetComponentInChildren<InventoryTrigger>().ItemSelected += ps.OnItemSelected;
+			player.GetComponentInChildren<InventoryTrigger>().ItemUnselected += ps.OnItemUnselected;
+
 
 			FindObjectOfType<Inventory>().RegisterPlayer(ps);
 
@@ -72,8 +74,23 @@ public class GameManager : MonoBehaviour
 			cs.shipBaseSpeed = playerData.ShipRoomCraftTimeMultiplier;
 			cs.itemBaseSpeed = playerData.ItemCraftTimeMultiplier;
 
-
+			DeathPanel dp = FindObjectOfType<PanelHolder>().deathPanel.GetComponent<DeathPanel>();
+			dp.restart.onClick.AddListener(Restart);
+			dp.mainMenu.onClick.AddListener(Main);
 		}
 	}
 
+
+	public void Restart()
+	{
+		SceneManager.UnloadSceneAsync(2);
+		SceneManager.LoadScene(2, LoadSceneMode.Additive);
+	}
+
+	public void Main()
+	{
+
+		SceneManager.LoadScene(1, LoadSceneMode.Additive);
+		SceneManager.UnloadSceneAsync(2);
+	}
 }
