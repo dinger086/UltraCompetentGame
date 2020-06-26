@@ -87,6 +87,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8175976835071316051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Water
+  m_EditorClassIdentifier: 
+  Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-7566295374079188667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +174,7 @@ MonoBehaviour:
   lastModified: 637287003141209228
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6617209563931204656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +208,7 @@ MonoBehaviour:
   Path: event:/Kraken
   guid: 6ee4d06ba09b2b4ab8adf3aa0870f2f0
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -232,7 +249,7 @@ MonoBehaviour:
   Path: event:/WaterEntry
   guid: 99f53ae4d735ef46a3176f43740ad03d
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -272,7 +289,7 @@ MonoBehaviour:
   Path: event:/Dialogue
   guid: 63b475f81366d24cbe8540192a1ba2d7
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -332,6 +349,23 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &-3605414722335527014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Metal
+  m_EditorClassIdentifier: 
+  Name: Metal
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &-3580071701229329509
 MonoBehaviour:
@@ -349,7 +383,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3522165836320117390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,14 +399,14 @@ MonoBehaviour:
   Path: event:/Walking
   guid: 83396a40c62b1344a7d0ecce89515d4d
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -2253632022795604633}
-  - {fileID: -3658390819783634410}
-  - {fileID: -3580071701229329509}
+  - {fileID: -2686769869443435825}
+  - {fileID: -8175976835071316051}
+  - {fileID: -3605414722335527014}
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
@@ -391,7 +425,7 @@ MonoBehaviour:
   Path: event:/Underwater-Ambience
   guid: 4ccacb089b512846959136b5a54624c8
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -399,6 +433,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 30000
+--- !u!114 &-2686769869443435825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Regular
+  m_EditorClassIdentifier: 
+  Name: Regular
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-2512859658247151398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +502,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2028779643748931979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,7 +518,7 @@ MonoBehaviour:
   Path: event:/BGM
   guid: ef2d813ff33c954296c9deb4a6a1d306
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -542,7 +593,7 @@ MonoBehaviour:
   Path: event:/StartButton
   guid: 1ed4fa4d8af8ca43819ac44f8c9e5b9f
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -668,7 +719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 2157987383891145693}
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   EditorEvents:
   - {fileID: -3522165836320117390}
   - {fileID: 3799223794194915976}
@@ -683,10 +734,10 @@ MonoBehaviour:
   - {fileID: 1176738556160904453}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   StringsBanks:
   - {fileID: 2157987383891145693}
-  stringsBankWriteTime: 637287003141228854
+  stringsBankWriteTime: 637286874970000000
   cacheVersion: 3
 --- !u!114 &381214609761763614
 MonoBehaviour:
@@ -754,7 +805,7 @@ MonoBehaviour:
   Path: event:/Thud
   guid: f7a551c9f006ff47bd041d513c69ab81
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -844,7 +895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: StrangerGameJam/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637287003141228854
+  lastModified: 637286874970000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -940,6 +991,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &3168822149819963443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: StrangerGameJam/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637286874970000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3306855424397020002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,7 +1041,7 @@ MonoBehaviour:
   Path: event:/WaterExit
   guid: 52954b15e880944e90f6659568c7e274
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1064,7 +1133,7 @@ MonoBehaviour:
   Path: event:/Submarine
   guid: ea5b8f773ec0a244af3b5178f93d995c
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1121,7 +1190,7 @@ MonoBehaviour:
   Path: event:/Bubbles
   guid: d2f0664936a91647a07c79ba37fe8542
   Banks:
-  - {fileID: -6716992469957864614}
+  - {fileID: 3168822149819963443}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
