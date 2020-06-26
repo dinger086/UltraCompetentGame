@@ -18,13 +18,13 @@ public class MainMenuScript : MonoBehaviour
 	{
 		bg.SetFloat("Speed", .25f);
 		bg.SetTrigger("FadeIn");
-		Invoke("ShowTitle", 12f);
+		Invoke("ShowTitle", 9.1f);
 	}
 
 	private void ShowTitle()
 	{
 		title.SetTrigger("FadeIn");
-		Invoke("ShowButtons", 3f);
+		Invoke("ShowButtons", 2.3f);
 	}
 
 	private void ShowButtons()
