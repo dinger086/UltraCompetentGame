@@ -26,7 +26,7 @@ public class Ship : MonoBehaviour
 
 	private void OnEnteredAir()
 	{
-		Debug.Log("called");
+		//Debug.Log("called");
 		if (sr == null)
 		{
 			sr = GetComponent<SpriteRenderer>();
@@ -34,7 +34,7 @@ public class Ship : MonoBehaviour
 
 		sr.enabled = false;
 
-		Debug.Log(sr.enabled);
+		//Debug.Log(sr.enabled);
 	}
 
 	private void Awake()

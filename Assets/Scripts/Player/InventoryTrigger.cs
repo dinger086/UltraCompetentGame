@@ -16,7 +16,7 @@ public class InventoryTrigger : MonoBehaviour
 	{
 		if (collision.tag == "Item")
 		{
-			Debug.Log("here");
+			//Debug.Log("here");
 			if (ItemSelected != null)
 			{
 				ItemSelected(collision.GetComponent<Item>());

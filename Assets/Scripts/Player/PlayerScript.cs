@@ -334,7 +334,7 @@ public class PlayerScript : MonoBehaviour
 		RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position - (Vector2.down), Vector2.down, 2f,LayerMask.GetMask("Platform","Ground"));
 		if (hit.transform !=null)
 		{
-			Debug.Log(hit.transform.tag);
+			//Debug.Log(hit.transform.tag);
 
 			if (!onGround)
 			{
@@ -416,15 +416,15 @@ public class PlayerScript : MonoBehaviour
 		//for testing, not final
 		if (Input.GetKeyDown(KeyCode.E))
 		{
-			Debug.Log("e");
+			//Debug.Log("e");
 			if (inventory.Count < maxInventoryCount)
 			{
-				Debug.Log("less");
+				//Debug.Log("less");
 				//we want to pick up an item
 				if (currentSelectedItem != null)
 				{
 					FMODUnity.RuntimeManager.PlayOneShot(pickup);
-					Debug.Log("not null");
+					//Debug.Log("not null");
 					inventory.Add(currentSelectedItem.itemData);
 					//Debug.Log("Adding Item");
 					//Debug.Log(inventory.Count);
@@ -478,7 +478,7 @@ public class PlayerScript : MonoBehaviour
                     collision.OverlapPoint(bottomLeft) &&
                     collision.OverlapPoint(bottomRight) && inWater)
                 {
-					Debug.Log("entered air");
+					//Debug.Log("entered air");
                     Enter("air");
                 }
                 break;
