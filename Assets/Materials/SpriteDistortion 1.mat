@@ -66,7 +66,7 @@ Material:
     - _DistortionScaleX: 0.16
     - _DistortionScaleY: 0.53
     - _DistortionScrollX: 0.079
-    - _DistortionScrollY: 0.115
+    - _DistortionScrollY: 0.076
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -75,7 +75,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RefractionX: 0
+    - _RefractionX: 0.003
     - _RefractionY: -0.008
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
