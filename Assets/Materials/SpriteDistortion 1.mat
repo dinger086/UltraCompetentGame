@@ -63,17 +63,11 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-<<<<<<< HEAD
+
     - _DistortionScaleX: 0.125
     - _DistortionScaleY: 0.125
     - _DistortionScrollX: 0.184
     - _DistortionScrollY: 0.175
-=======
-    - _DistortionScaleX: 0.16
-    - _DistortionScaleY: 0.53
-    - _DistortionScrollX: 0.079
-    - _DistortionScrollY: 0.076
->>>>>>> fe62264da6910b65e7d5705305817b38c28827a8
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -82,13 +76,9 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-<<<<<<< HEAD
+
     - _RefractionX: 0.005
     - _RefractionY: -0.001
-=======
-    - _RefractionX: 0.003
-    - _RefractionY: -0.008
->>>>>>> fe62264da6910b65e7d5705305817b38c28827a8
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
