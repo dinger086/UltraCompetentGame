@@ -25,6 +25,9 @@ public class PlayerScript : MonoBehaviour
 	[FMODUnity.EventRef]
 	public string thump;
 
+	[FMODUnity.EventRef]
+	public string pickup;
+
 	private float jumpCooldown = 0f;
 	private float jumpPause = 0.2f;
 	public float jumpPower;
@@ -53,9 +56,10 @@ public class PlayerScript : MonoBehaviour
 	public event FoodHandler FoodEaten;
 
 	//for sending events to health meter
-	public delegate void HealthHandler(float amt);
+	public delegate void HealthHandler();
 	public event HealthHandler Healed;
 	public event HealthHandler Damaged;
+	public event HealthHandler Deplete;
 
 
 	//for sending events to health meter
@@ -65,14 +69,16 @@ public class PlayerScript : MonoBehaviour
 
 	public delegate void InventoryHandler(ItemData item);
 	public event InventoryHandler AddItem;
+	public event InventoryHandler RemoveItem;
 
 
 
 	//public event InventoryHandler CloseInventory;
 
-    [SerializeField]
+	[SerializeField]
 	//we should use this for making sure the player is inside the air bubble, we don't need an extra vector2
     BoxCollider2D PlayerShape;
+
 
 	public void OnItemRemoved(ItemData item)
 	{
@@ -89,6 +95,11 @@ public class PlayerScript : MonoBehaviour
 	public void OnOxygenDepleted()
 	{
 		//we've run out of air
+		if (Deplete != null)
+		{
+			Deplete();
+		}
+
 	}
 
 	public void OnItemUnselected(Item i)
@@ -105,7 +116,12 @@ public class PlayerScript : MonoBehaviour
 	public void OnStarved()
 	{
 		//we're dead from starvation
+		if (Deplete != null)
+		{
+			Deplete();
+		}
 	}
+
 
 	public void Enter(string key)
     {
@@ -161,7 +177,17 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    private void Swim()
+	public void OnAnimalUnselected(GameObject go)
+	{
+		throw new NotImplementedException();
+	}
+
+	public void OnAnimalSelected(GameObject go)
+	{
+		throw new NotImplementedException();
+	}
+
+	private void Swim()
     {
         float delta = Time.deltaTime;
         Vector2 direction = new Vector2(0, 0);
@@ -305,10 +331,10 @@ public class PlayerScript : MonoBehaviour
 
 	private void IsGrounded()
 	{
-		RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position - (Vector2.down/2f), Vector2.down, 1f,LayerMask.GetMask("Platform","Ground"));
+		RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position - (Vector2.down), Vector2.down, 2f,LayerMask.GetMask("Platform","Ground"));
 		if (hit.transform !=null)
 		{
-			//Debug.Log(hit.transform.tag);
+			Debug.Log(hit.transform.tag);
 
 			if (!onGround)
 			{
@@ -355,10 +381,30 @@ public class PlayerScript : MonoBehaviour
 		//for testing, not final
 		if (Input.GetKeyDown(KeyCode.F))
 		{
-			if (FoodEaten != null)
+			for (int i = 0; i < inventory.Count; i++)
 			{
-				FoodEaten(10f);
+				if (inventory[i].name == "Cooked Fish")
+				{
+					if (RemoveItem != null)
+					{
+						RemoveItem(inventory[i]);
+					}
+
+					inventory.RemoveAt(i);
+					if (FoodEaten != null)
+					{
+						FoodEaten(10f);
+					}
+
+					if (Healed != null)
+					{
+						Healed();
+					}
+
+					break;
+				}
 			}
+			
 		}
 
 		////for testing, not final
@@ -377,6 +423,7 @@ public class PlayerScript : MonoBehaviour
 				//we want to pick up an item
 				if (currentSelectedItem != null)
 				{
+					FMODUnity.RuntimeManager.PlayOneShot(pickup);
 					Debug.Log("not null");
 					inventory.Add(currentSelectedItem.itemData);
 					//Debug.Log("Adding Item");

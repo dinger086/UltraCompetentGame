@@ -37,6 +37,19 @@ public class Inventory : MonoBehaviour
 		GetComponent<GridLayoutGroup>().constraintCount = temp;
 		ps.AddItem += OnItemAdded;
 		ItemRemoved += ps.OnItemRemoved;
+		ps.RemoveItem += OnItemRemoved;
+	}
+
+	private void OnItemRemoved(ItemData item)
+	{
+		for (int i = 0; i < items.Count; i++)
+		{
+			if (items[i].GetComponentInChildren<Text>().text.Equals(item.name))
+			{
+				items.RemoveAt(i);
+				break;
+			}
+		}
 	}
 
 	private void OnItemAdded(ItemData item)

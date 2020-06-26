@@ -30,3 +30,4 @@ MonoBehaviour:
     raw materials to power it back to the surface.  Something is out there. Best
     do it fast. "
   prefab: {fileID: 4528003749774371886, guid: 89e2f1aefa909154ebfb9746cb02d519, type: 3}
+  image: {fileID: 21300000, guid: f962a88921c0b3a479bdc8f83161990e, type: 3}

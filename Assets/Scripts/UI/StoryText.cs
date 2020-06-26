@@ -7,4 +7,5 @@ public class StoryText : MonoBehaviour
 {
 	public Text story;
 	public Button next;
+	public Image image;
 }

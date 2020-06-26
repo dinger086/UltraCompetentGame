@@ -5,6 +5,7 @@
 {3f812def-3cf3-4295-96c9-deb4a6a1d306} event:/BGM
 {4966f0d2-a936-4716-a07c-79ba37fe8542} event:/Bubbles
 {f875b463-6613-4cd2-be85-40192a1ba2d7} event:/Dialogue
+{b8fd1680-3f79-46d5-abe3-773ba41448f4} event:/ItemPickUp
 {6bd0e46e-9ba0-4a2b-b8ad-f3aa0870f2f0} event:/Kraken
 {4dfad41e-f88a-43ca-819a-c44f8c9e5b9f} event:/StartButton
 {778f5bea-c03e-44a2-af3b-5178f93d995c} event:/Submarine

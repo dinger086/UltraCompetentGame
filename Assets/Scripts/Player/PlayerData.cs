@@ -8,6 +8,7 @@ public class PlayerData : BasePlayerData
 	public string description;
 
 	public GameObject prefab;
+	public Sprite image;
 
 	public float SwimSpeed
 	{

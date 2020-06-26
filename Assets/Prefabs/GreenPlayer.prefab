@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 5508366157497697253}
   - component: {fileID: 262422301196878729}
   m_Layer: 0
-  m_Name: player
+  m_Name: GreenPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,6 +273,7 @@ MonoBehaviour:
   waterExit: event:/WaterExit
   waterAmbient: event:/Underwater-Ambience
   thump: event:/Thud
+  pickup: event:/ItemPickUp
   jumpPower: 0.5
   swimForce: 20
   maxInventoryCount: 8

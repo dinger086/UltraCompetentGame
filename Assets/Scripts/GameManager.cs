@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
 			Debug.Log(playerData.name);
 
 			FindObjectOfType<StoryText>().story.text = playerData.description;
+			FindObjectOfType<StoryText>().image.sprite = playerData.image;
 			FindObjectOfType<StoryText>().next.onClick.AddListener(Continue);
 
 		} //this is the level scene,
@@ -78,9 +79,16 @@ public class GameManager : MonoBehaviour
 			om.OxygenDepleted += ps.OnOxygenDepleted;
 			om.depleteSpeed = 1f / playerData.HoldBreath;
 
+			HealthMeter hm = FindObjectOfType<HealthMeter>();
+			ps.Deplete += hm.Depletion;
+			ps.Healed += hm.Fill;
+
 			//setup item detection
 			player.GetComponentInChildren<InventoryTrigger>().ItemSelected += ps.OnItemSelected;
 			player.GetComponentInChildren<InventoryTrigger>().ItemUnselected += ps.OnItemUnselected;
+			//setup animal detection
+			player.GetComponentInChildren<InventoryTrigger>().AnimalSelected += ps.OnAnimalSelected;
+			player.GetComponentInChildren<InventoryTrigger>().AnimalUnselected += ps.OnAnimalUnselected;
 
 
 			FindObjectOfType<Inventory>().RegisterPlayer(ps);
