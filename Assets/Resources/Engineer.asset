@@ -28,4 +28,4 @@ MonoBehaviour:
     Your fellow crew, what\u2019s left of them, are in suspension. Probably one of
     them that got us in this mess. You need to fix this ship and gather the raw materials
     to power it back to the surface.  Something is out there. Best do it fast. "
-  prefab: {fileID: 0}
+  prefab: {fileID: 6451997212116962004, guid: f7169dafc6efbe94086920515ef5dc6e, type: 3}

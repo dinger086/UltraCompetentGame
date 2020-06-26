@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+	public Animator anim;
 	public float footstepInterval = 0.5f;
 	[FMODUnity.EventRef]
 	public string footStep;
@@ -38,7 +39,7 @@ public class PlayerScript : MonoBehaviour
 	private Rigidbody2D r2d;
     private bool onGround = false;
     private bool inWater = false;
-	private bool isFacingRight = true;
+	private bool isFacingRight = false;
 
 
 
@@ -122,6 +123,7 @@ public class PlayerScript : MonoBehaviour
 					EnteredAir();
 				}
 
+				anim.SetBool("InWater", false);
 				FMOD.Studio.PLAYBACK_STATE state;
 				water.getPlaybackState(out state);
 				if (state != FMOD.Studio.PLAYBACK_STATE.PLAYING)
@@ -135,7 +137,8 @@ public class PlayerScript : MonoBehaviour
 				break;
             case "water":
                 inWater = true;
-                r2d.drag = 2f;
+				anim.SetBool("InWater", true);
+				r2d.drag = 2f;
                 r2d.gravityScale = 0.1f;
 				//onGround = true;
 
@@ -187,7 +190,8 @@ public class PlayerScript : MonoBehaviour
         direction *= swimForce*delta;
 
 		//Debug.Log(direction);
-        r2d.AddForce(direction, ForceMode2D.Force);
+		anim.SetBool("Moving", direction.sqrMagnitude > 0f);
+		r2d.AddForce(direction, ForceMode2D.Force);
 
     }
 
@@ -223,7 +227,8 @@ public class PlayerScript : MonoBehaviour
 		}
 
 		direction *= delta;
-		Debug.Log("walking " + direction);
+		//Debug.Log("walking " + direction);
+		anim.SetBool("Moving", direction.sqrMagnitude > 0f);
 		r2d.AddForce(direction*20f, ForceMode2D.Force);
         
 
@@ -236,7 +241,7 @@ public class PlayerScript : MonoBehaviour
 			if (!isFacingRight)
 			{
 				isFacingRight = true;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
 			}
 		}
 		else
@@ -244,7 +249,7 @@ public class PlayerScript : MonoBehaviour
 			if (isFacingRight)
 			{
 				isFacingRight = false;
-				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
+				transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
 			}
 		}
 	}
@@ -303,7 +308,7 @@ public class PlayerScript : MonoBehaviour
 		RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position - (Vector2.down/2f), Vector2.down, 1f,LayerMask.GetMask("Platform","Ground"));
 		if (hit.transform !=null)
 		{
-			Debug.Log(hit.transform.tag);
+			//Debug.Log(hit.transform.tag);
 
 			if (!onGround)
 			{
@@ -317,6 +322,8 @@ public class PlayerScript : MonoBehaviour
 		{
 			onGround = false;
 		}
+
+		anim.SetBool("OnGround", onGround);
 		
 	}
 

@@ -31455,7 +31455,7 @@ MonoBehaviour:
   foodBaseSpeed: 1
   itemBaseSpeed: 1
   shipBaseSpeed: 1
-  craftingPanel: {fileID: 0}
+  craftingPanel: {fileID: 1474395734}
 --- !u!61 &2040870178
 BoxCollider2D:
   m_ObjectHideFlags: 0

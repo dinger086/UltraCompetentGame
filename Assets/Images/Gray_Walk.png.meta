@@ -1,7 +1,112 @@
 fileFormatVersion: 2
 guid: eb77773f70c7ccd4aa7f0886998a9f2a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7916591993015168396
+    second: Gray_Walk_0
+  - first:
+      213: 7646811623863253705
+    second: Gray_Walk_1
+  - first:
+      213: 5858357174974222353
+    second: Gray_Walk_2
+  - first:
+      213: 742376205627993589
+    second: Gray_Walk_3
+  - first:
+      213: 8630125176584559323
+    second: Gray_Walk_4
+  - first:
+      213: 2293816806165470654
+    second: Gray_Walk_5
+  - first:
+      213: 226732264085891873
+    second: Gray_Walk_6
+  - first:
+      213: 3490081543728890279
+    second: Gray_Walk_7
+  - first:
+      213: 8644661949808881316
+    second: Gray_Walk_8
+  - first:
+      213: -8236503925887803335
+    second: Gray_Walk_9
+  - first:
+      213: 5094678673133796919
+    second: Gray_Walk_10
+  - first:
+      213: 4312248903668758194
+    second: Gray_Walk_11
+  - first:
+      213: -8898598915861513567
+    second: Gray_Walk_12
+  - first:
+      213: -6209842395367153807
+    second: Gray_Walk_13
+  - first:
+      213: -796456161637147753
+    second: Gray_Walk_14
+  - first:
+      213: -2631109248771309392
+    second: Gray_Walk_15
+  - first:
+      213: 5239075376731787079
+    second: Gray_Walk_16
+  - first:
+      213: -8206426312998163622
+    second: Gray_Walk_17
+  - first:
+      213: -4949025122378053437
+    second: Gray_Walk_18
+  - first:
+      213: 111898272820438889
+    second: Gray_Walk_19
+  - first:
+      213: -2853449832892844470
+    second: Gray_Walk_20
+  - first:
+      213: -6513065160268660418
+    second: Gray_Walk_21
+  - first:
+      213: -5797015320230690634
+    second: Gray_Walk_22
+  - first:
+      213: -2181731096047116079
+    second: Gray_Walk_23
+  - first:
+      213: -1621758361686234706
+    second: Gray_Walk_24
+  - first:
+      213: 4055676111166113490
+    second: Gray_Walk_25
+  - first:
+      213: 701998611057598139
+    second: Gray_Walk_26
+  - first:
+      213: -3924758793262695897
+    second: Gray_Walk_27
+  - first:
+      213: -8328757116427808784
+    second: Gray_Walk_28
+  - first:
+      213: -1699107136847991347
+    second: Gray_Walk_29
+  - first:
+      213: 150015904190101010
+    second: Gray_Walk_30
+  - first:
+      213: 3502128721750131732
+    second: Gray_Walk_31
+  - first:
+      213: -9022227600190846562
+    second: Gray_Walk_32
+  - first:
+      213: 9088373797089396070
+    second: Gray_Walk_33
+  - first:
+      213: -4180502220914931856
+    second: Gray_Walk_34
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +145,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 175
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +176,780 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Gray_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1738
+        width: 169
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47211a8b68d922290800000000000000
+      internalID: -7916591993015168396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1738
+        width: 170
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca72b848aeee1a60800000000000000
+      internalID: 7646811623863253705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1738
+        width: 170
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11013bdcfc01d4150800000000000000
+      internalID: 5858357174974222353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1738
+        width: 171
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fda82ac9337d4a00800000000000000
+      internalID: 742376205627993589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1738
+        width: 179
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda5a7daf1d54c770800000000000000
+      internalID: 8630125176584559323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 1738
+        width: 179
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd50576b3645df10800000000000000
+      internalID: 2293816806165470654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1738
+        width: 179
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ba5fbfac3852300800000000000000
+      internalID: 226732264085891873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1738
+        width: 179
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a18b1b3ca24f6030800000000000000
+      internalID: 3490081543728890279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1738
+        width: 179
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aea1b1fd3208f770800000000000000
+      internalID: 8644661949808881316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 1737
+        width: 122
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930e85a715f02bd80800000000000000
+      internalID: -8236503925887803335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1425
+        width: 122
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ef5eca24fe3b640800000000000000
+      internalID: 5094678673133796919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1425
+        width: 122
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b67e36d78f28db30800000000000000
+      internalID: 4312248903668758194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1425
+        width: 122
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aaf56dce63d18480800000000000000
+      internalID: -8898598915861513567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_13
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1425
+        width: 122
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fdaf81e3532d9a0800000000000000
+      internalID: -6209842395367153807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1426
+        width: 82
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b527e375b62f4f0800000000000000
+      internalID: -796456161637147753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 1426
+        width: 82
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0cdb5141c6c7bd0800000000000000
+      internalID: -2631109248771309392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_16
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1426
+        width: 82
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f089d1c4fe4b840800000000000000
+      internalID: 5239075376731787079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_17
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1426
+        width: 82
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b63527fbaec1e80800000000000000
+      internalID: -8206426312998163622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_18
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1426
+        width: 82
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c80c2c4fd7815bb0800000000000000
+      internalID: -4949025122378053437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_19
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 1427
+        width: 170
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9672172e2ea8d8100800000000000000
+      internalID: 111898272820438889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1115
+        width: 169
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a463606ce728668d0800000000000000
+      internalID: -2853449832892844470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1115
+        width: 170
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31c6339eb1fc95a0800000000000000
+      internalID: -6513065160268660418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_22
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1115
+        width: 170
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b00728b74ddc8fa0800000000000000
+      internalID: -5797015320230690634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_23
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1115
+        width: 170
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d020b0a02fe8b1e0800000000000000
+      internalID: -2181731096047116079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_24
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1114
+        width: 177
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea92c2ccc5b5e79e0800000000000000
+      internalID: -1621758361686234706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_25
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1114
+        width: 177
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6081a6fe7a84830800000000000000
+      internalID: 4055676111166113490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_26
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1114
+        width: 177
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbed7e474000eb900800000000000000
+      internalID: 701998611057598139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_27
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 1114
+        width: 177
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a7c7afba47889c0800000000000000
+      internalID: -3924758793262695897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_28
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 1114
+        width: 177
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff40deb78f4a6c80800000000000000
+      internalID: -8328757116427808784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_29
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1113
+        width: 118
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd28d0bf0f8b68e0800000000000000
+      internalID: -1699107136847991347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_30
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 801
+        width: 118
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216f8e78ba6f41200800000000000000
+      internalID: 150015904190101010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_31
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 801
+        width: 118
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4140c91748f0a9030800000000000000
+      internalID: 3502128721750131732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_32
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 801
+        width: 118
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9946e7accb9ac280800000000000000
+      internalID: -9022227600190846562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_33
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 801
+        width: 118
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6654b71f0d3602e70800000000000000
+      internalID: 9088373797089396070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray_Walk_34
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 802
+        width: 82
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07742ab116fdbf5c0800000000000000
+      internalID: -4180502220914931856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

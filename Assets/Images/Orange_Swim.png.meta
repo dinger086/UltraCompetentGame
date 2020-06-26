@@ -1,7 +1,121 @@
 fileFormatVersion: 2
 guid: 002dfef8a9a3e094bbd8afe86468537d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8240027722788081601
+    second: Orange_Swim_0
+  - first:
+      213: 3633792972859307484
+    second: Orange_Swim_1
+  - first:
+      213: 5408271139948720331
+    second: Orange_Swim_2
+  - first:
+      213: -83066030107094822
+    second: Orange_Swim_3
+  - first:
+      213: -6345862476164770281
+    second: Orange_Swim_4
+  - first:
+      213: -8120513526062282202
+    second: Orange_Swim_5
+  - first:
+      213: -7671555997679201335
+    second: Orange_Swim_6
+  - first:
+      213: -2091555990327489531
+    second: Orange_Swim_7
+  - first:
+      213: -333356755570623518
+    second: Orange_Swim_8
+  - first:
+      213: -7565646903942205994
+    second: Orange_Swim_9
+  - first:
+      213: 2561258418099083459
+    second: Orange_Swim_10
+  - first:
+      213: -926095280917570487
+    second: Orange_Swim_11
+  - first:
+      213: 741415056139893728
+    second: Orange_Swim_12
+  - first:
+      213: 2130305434496451907
+    second: Orange_Swim_13
+  - first:
+      213: -2055012412826942985
+    second: Orange_Swim_14
+  - first:
+      213: -1922617947595695453
+    second: Orange_Swim_15
+  - first:
+      213: 3325650861205626667
+    second: Orange_Swim_16
+  - first:
+      213: -6141487180776085939
+    second: Orange_Swim_17
+  - first:
+      213: -4623802194993624079
+    second: Orange_Swim_18
+  - first:
+      213: 4190011929160799426
+    second: Orange_Swim_19
+  - first:
+      213: -5273931468666435436
+    second: Orange_Swim_20
+  - first:
+      213: -3337915294551114226
+    second: Orange_Swim_21
+  - first:
+      213: -1272278720161400450
+    second: Orange_Swim_22
+  - first:
+      213: 2340687945701931726
+    second: Orange_Swim_23
+  - first:
+      213: -1346134688605881705
+    second: Orange_Swim_24
+  - first:
+      213: -5397382950758690400
+    second: Orange_Swim_25
+  - first:
+      213: -7881537854387088850
+    second: Orange_Swim_26
+  - first:
+      213: 3384706243387453179
+    second: Orange_Swim_27
+  - first:
+      213: 4927637572395648120
+    second: Orange_Swim_28
+  - first:
+      213: -3503844365533165886
+    second: Orange_Swim_29
+  - first:
+      213: 4805097249518980265
+    second: Orange_Swim_30
+  - first:
+      213: 961359259562293299
+    second: Orange_Swim_31
+  - first:
+      213: -1723123824437600541
+    second: Orange_Swim_32
+  - first:
+      213: 4484001743399537949
+    second: Orange_Swim_33
+  - first:
+      213: 4036909951127832283
+    second: Orange_Swim_34
+  - first:
+      213: 8378195731286062939
+    second: Orange_Swim_35
+  - first:
+      213: 3563948558945631063
+    second: Orange_Swim_36
+  - first:
+      213: 6680681705805043230
+    second: Orange_Swim_37
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +154,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 175
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +185,843 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Orange_Swim_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1846
+        width: 347
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3078d3917a85ad80800000000000000
+      internalID: -8240027722788081601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1846
+        width: 348
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5f696c473dd6230800000000000000
+      internalID: 3633792972859307484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1846
+        width: 347
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0f3a192f90e0b40800000000000000
+      internalID: 5408271139948720331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_3
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 1867
+        width: 341
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0909eb2e3e8def0800000000000000
+      internalID: -83066030107094822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_4
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 1895
+        width: 329
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716d7b223b7fee7a0800000000000000
+      internalID: -6345862476164770281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1687
+        width: 319
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a8d4de8f32e4f80800000000000000
+      internalID: -8120513526062282202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_6
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1687
+        width: 307
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c350db3778298590800000000000000
+      internalID: -7671555997679201335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_7
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1687
+        width: 303
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c80b888ec49f2e0800000000000000
+      internalID: -2091555990327489531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_8
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1687
+        width: 303
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb7cb80ccdaf5bf0800000000000000
+      internalID: -333356755570623518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_9
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 1652
+        width: 275
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddad72b93c610790800000000000000
+      internalID: -7565646903942205994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_10
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1449
+        width: 275
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c856cc06fa6b8320800000000000000
+      internalID: 2561258418099083459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_11
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1449
+        width: 275
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c1eb8af39d523f0800000000000000
+      internalID: -926095280917570487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_12
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1449
+        width: 275
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb385cb0190a4a00800000000000000
+      internalID: 741415056139893728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_13
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 1462
+        width: 271
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345ce3e718d509d10800000000000000
+      internalID: 2130305434496451907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_14
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 1477
+        width: 272
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f18e6439112b73e0800000000000000
+      internalID: -2055012412826942985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_15
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1277
+        width: 264
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa94c2c92d7155e0800000000000000
+      internalID: -1922617947595695453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_16
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1277
+        width: 257
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f122596d5172e20800000000000000
+      internalID: 3325650861205626667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_17
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1277
+        width: 260
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46e935b2fd05caa0800000000000000
+      internalID: -6141487180776085939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_18
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1277
+        width: 275
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbcbbfc664f4dfb0800000000000000
+      internalID: -4623802194993624079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_19
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 1237
+        width: 301
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4574266a9e52a30800000000000000
+      internalID: 4190011929160799426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_20
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1034
+        width: 327
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4980260954b3fc6b0800000000000000
+      internalID: -5273931468666435436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_21
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1034
+        width: 352
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0effe189b75da1d0800000000000000
+      internalID: -3337915294551114226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_22
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1034
+        width: 355
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79bd7dae35f75ee0800000000000000
+      internalID: -1272278720161400450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_23
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1055
+        width: 353
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca3a9df84bcb7020800000000000000
+      internalID: 2340687945701931726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_24
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1083
+        width: 350
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ab0d102a1915de0800000000000000
+      internalID: -1346134688605881705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 875
+        width: 352
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a157478dc4a815b0800000000000000
+      internalID: -5397382950758690400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_26
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 875
+        width: 351
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22967164172f9290800000000000000
+      internalID: -7881537854387088850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_27
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 875
+        width: 350
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfee72a3564e8fe20800000000000000
+      internalID: 3384706243387453179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_28
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 875
+        width: 350
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874c28ca34c726440800000000000000
+      internalID: 4927637572395648120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_29
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 840
+        width: 349
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6442c1d18df5fc0800000000000000
+      internalID: -3503844365533165886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_30
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 637
+        width: 348
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac09cc6d722fa240800000000000000
+      internalID: 4805097249518980265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_31
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 637
+        width: 348
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3383ebf272f675d00800000000000000
+      internalID: 961359259562293299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_32
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 637
+        width: 347
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee526cd20c3618e0800000000000000
+      internalID: -1723123824437600541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_33
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 650
+        width: 343
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1dcf8f04df5a3e30800000000000000
+      internalID: 4484001743399537949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_34
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 665
+        width: 343
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6c63b463cf50830800000000000000
+      internalID: 4036909951127832283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_35
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 465
+        width: 334
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57fff5c0a4554470800000000000000
+      internalID: 8378195731286062939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_36
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 465
+        width: 334
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b38bde450b57130800000000000000
+      internalID: 3563948558945631063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Swim_37
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 465
+        width: 333
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16d5fb9d9c86bc50800000000000000
+      internalID: 6680681705805043230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

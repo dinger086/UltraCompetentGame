@@ -28,4 +28,4 @@ MonoBehaviour:
     Your fellow crew, what\u2019s left of them, are in suspension. Med school didn\u2019t
     prepare you for this. You need to fix this ship and gather the raw materials
     to power it back to the surface.  Something is out there. Best do it fast. "
-  prefab: {fileID: 0}
+  prefab: {fileID: 5508366157497697243, guid: 80f67df7b145f3047b1823f3f9d852b0, type: 3}

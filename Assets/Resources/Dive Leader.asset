@@ -29,4 +29,4 @@ MonoBehaviour:
     You love the deep, but not like this. You need to fix this ship and gather the
     raw materials to power it back to the surface.  Something is out there. Best
     do it fast. "
-  prefab: {fileID: 0}
+  prefab: {fileID: 4528003749774371886, guid: 89e2f1aefa909154ebfb9746cb02d519, type: 3}

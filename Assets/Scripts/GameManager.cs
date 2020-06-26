@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 	public	PlayerData[] data;
 	PlayerData playerData;
-	public GameObject playerPrefab;
+	//public GameObject playerPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 			//we should notify the systems that require this information
 			//animal/resource spawners, crafting system, the player object
 
-			GameObject player = Instantiate(playerPrefab, new Vector3(-2.3f, 3.2f, 0), Quaternion.identity);
+			GameObject player = Instantiate(playerData.prefab, new Vector3(-2.3f, 3.2f, 0), Quaternion.identity);
 
 			//register with the camera
 			FindObjectOfType<CameraFollow>().RegisterPlayer(player.transform);

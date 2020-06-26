@@ -1,7 +1,121 @@
 fileFormatVersion: 2
 guid: 322fc60ab72e9ad419e8e2be5bcf68e4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5016916785911052462
+    second: Purple_Swim_0
+  - first:
+      213: -3024281543056353811
+    second: Purple_Swim_1
+  - first:
+      213: -3924969182989712870
+    second: Purple_Swim_2
+  - first:
+      213: -7968089383336782737
+    second: Purple_Swim_3
+  - first:
+      213: -9138828880626121902
+    second: Purple_Swim_4
+  - first:
+      213: -3702270925739051985
+    second: Purple_Swim_5
+  - first:
+      213: 1022230970519485760
+    second: Purple_Swim_6
+  - first:
+      213: -2215067135751764490
+    second: Purple_Swim_7
+  - first:
+      213: -9111871626237505798
+    second: Purple_Swim_8
+  - first:
+      213: -8422925234298422089
+    second: Purple_Swim_9
+  - first:
+      213: 9051509440155710248
+    second: Purple_Swim_10
+  - first:
+      213: -4431688058789564658
+    second: Purple_Swim_11
+  - first:
+      213: 1230627023792278585
+    second: Purple_Swim_12
+  - first:
+      213: 2916095088898499088
+    second: Purple_Swim_13
+  - first:
+      213: -2786211731184250358
+    second: Purple_Swim_14
+  - first:
+      213: -1614781536049594006
+    second: Purple_Swim_15
+  - first:
+      213: -6196988528585966611
+    second: Purple_Swim_16
+  - first:
+      213: 3494528368254362848
+    second: Purple_Swim_17
+  - first:
+      213: -6671362507497363823
+    second: Purple_Swim_18
+  - first:
+      213: 7590416293418563138
+    second: Purple_Swim_19
+  - first:
+      213: -8831175783307844871
+    second: Purple_Swim_20
+  - first:
+      213: 394415378232960761
+    second: Purple_Swim_21
+  - first:
+      213: -6175938372016226807
+    second: Purple_Swim_22
+  - first:
+      213: -4279866651037485086
+    second: Purple_Swim_23
+  - first:
+      213: -4723254092059152059
+    second: Purple_Swim_24
+  - first:
+      213: 891466685323396775
+    second: Purple_Swim_25
+  - first:
+      213: 5209512737057451717
+    second: Purple_Swim_26
+  - first:
+      213: 4815700720168772385
+    second: Purple_Swim_27
+  - first:
+      213: 7451408260788049436
+    second: Purple_Swim_28
+  - first:
+      213: -444873421315124471
+    second: Purple_Swim_29
+  - first:
+      213: 6063608090172484831
+    second: Purple_Swim_30
+  - first:
+      213: 5908301088948727912
+    second: Purple_Swim_31
+  - first:
+      213: -1252697980844462784
+    second: Purple_Swim_32
+  - first:
+      213: 8521525192482892033
+    second: Purple_Swim_33
+  - first:
+      213: 2657482951301459618
+    second: Purple_Swim_34
+  - first:
+      213: -7574346065435414819
+    second: Purple_Swim_35
+  - first:
+      213: -7343132904938542540
+    second: Purple_Swim_36
+  - first:
+      213: -5968144676087747200
+    second: Purple_Swim_37
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +154,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 175
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +185,843 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Purple_Swim_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1846
+        width: 347
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257c31493c4506ab0800000000000000
+      internalID: -5016916785911052462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1846
+        width: 348
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de51b5db5f79706d0800000000000000
+      internalID: -3024281543056353811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1846
+        width: 347
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a120b8dc255b789c0800000000000000
+      internalID: -3924969182989712870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_3
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 1867
+        width: 341
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6456af2ce8ab6190800000000000000
+      internalID: -7968089383336782737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_4
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 1895
+        width: 329
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253033b7d8b5c2180800000000000000
+      internalID: -9138828880626121902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1687
+        width: 319
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2431116534ee9cc0800000000000000
+      internalID: -3702270925739051985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_6
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1687
+        width: 307
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d7734d6a1bf2e00800000000000000
+      internalID: 1022230970519485760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_7
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1687
+        width: 303
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5cfdb0d208241e0800000000000000
+      internalID: -2215067135751764490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_8
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1687
+        width: 303
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe072f58012c8180800000000000000
+      internalID: -9111871626237505798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_9
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 1652
+        width: 275
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcf7ff3022cb1b80800000000000000
+      internalID: -8422925234298422089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_10
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1449
+        width: 275
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823739df0eb6d9d70800000000000000
+      internalID: 9051509440155710248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_11
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1449
+        width: 275
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fe18cc03b7f72c0800000000000000
+      internalID: -4431688058789564658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_12
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1449
+        width: 275
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c822c02c0141110800000000000000
+      internalID: 1230627023792278585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_13
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 1462
+        width: 271
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0126e01880d087820800000000000000
+      internalID: 2916095088898499088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_14
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 1477
+        width: 272
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a029cb541336559d0800000000000000
+      internalID: -2786211731184250358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_15
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1277
+        width: 264
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6187e99fb42799e0800000000000000
+      internalID: -1614781536049594006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_16
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1277
+        width: 257
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb767c24cfdff9a0800000000000000
+      internalID: -6196988528585966611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_17
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1277
+        width: 260
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4a35f390f0f7030800000000000000
+      internalID: 3494528368254362848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_18
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1277
+        width: 275
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196a2c4552f8a63a0800000000000000
+      internalID: -6671362507497363823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_19
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 1237
+        width: 301
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246fc823763965960800000000000000
+      internalID: 7590416293418563138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_20
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1034
+        width: 327
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f267e62a6c517580800000000000000
+      internalID: -8831175783307844871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_21
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1034
+        width: 352
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6e68162be397500800000000000000
+      internalID: 394415378232960761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_22
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1034
+        width: 355
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90eb44da5c8aa4aa0800000000000000
+      internalID: -6175938372016226807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_23
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1055
+        width: 353
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7bed2e4fbda94c0800000000000000
+      internalID: -4279866651037485086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_24
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1083
+        width: 350
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54177ea9d61a37eb0800000000000000
+      internalID: -4723254092059152059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 875
+        width: 352
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6cbc32a302f5c00800000000000000
+      internalID: 891466685323396775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_26
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 875
+        width: 351
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ceae21bb38eb4840800000000000000
+      internalID: 5209512737057451717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_27
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 875
+        width: 350
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123a0425a4ec4d240800000000000000
+      internalID: 4815700720168772385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_28
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 875
+        width: 350
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16deac7558b86760800000000000000
+      internalID: 7451408260788049436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_29
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 840
+        width: 349
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903df78fafd73d9f0800000000000000
+      internalID: -444873421315124471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_30
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 637
+        width: 348
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc6aef7e63462450800000000000000
+      internalID: 6063608090172484831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_31
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 637
+        width: 348
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860b7d079808ef150800000000000000
+      internalID: 5908301088948727912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_32
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 637
+        width: 347
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04daae0d2d58d9ee0800000000000000
+      internalID: -1252697980844462784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_33
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 650
+        width: 343
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1092c7a730a824670800000000000000
+      internalID: 8521525192482892033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_34
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 665
+        width: 343
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aeeafc0aa641e420800000000000000
+      internalID: 2657482951301459618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_35
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 465
+        width: 334
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde28d3526482e690800000000000000
+      internalID: -7574346065435414819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_36
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 465
+        width: 334
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ae7ae4783f71a90800000000000000
+      internalID: -7343132904938542540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple_Swim_37
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 465
+        width: 333
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08da6a5a904ec2da0800000000000000
+      internalID: -5968144676087747200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

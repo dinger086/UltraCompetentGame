@@ -29,4 +29,4 @@ MonoBehaviour:
     going to cook your way out of this one. You need to fix this ship and gather
     the raw materials to power it back to the surface.  Something is out there. Best
     do it fast. "
-  prefab: {fileID: 0}
+  prefab: {fileID: 1752291310614449848, guid: 8666085a55200f34d8ce932a7220aca6, type: 3}
