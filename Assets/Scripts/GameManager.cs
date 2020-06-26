@@ -54,8 +54,8 @@ public class GameManager : MonoBehaviour
 			ps.maxInventoryCount = playerData.ItemCarryLimit;
 
 			//again not good coding style
-			ps.EnteredAir += FindObjectOfType<Show>().OnEnteredAir;
-			ps.EnteredWater += FindObjectOfType<Show>().OnEnteredWater;
+			//ps.EnteredAir += FindObjectOfType<Show>().OnEnteredAir;
+			//ps.EnteredWater += FindObjectOfType<Show>().OnEnteredWater;
 
 			//let the ship and distoration layer know when we enter and exit water
 			Ship ship = FindObjectOfType<Ship>();

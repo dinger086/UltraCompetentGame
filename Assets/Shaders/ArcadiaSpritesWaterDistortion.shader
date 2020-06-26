@@ -22,8 +22,8 @@ Shader "Sprites/Water Distortion"
 		_RefractionX("X Refraction", Range(-0.1,0.1)) = 0.01
 		_RefractionY("Y Refraction", Range(-0.1,0.1)) = 0.01
 
-		_DistortionScrollX("X Scroll Speed", Range(-0.1,0.1)) = -0.1
-		_DistortionScrollY("Y Scroll Speed", Range(-0.1,0.1)) = 0.1
+		_DistortionScrollX("X Scroll Speed", Range(-0.1,0.3)) = -0.1
+		_DistortionScrollY("Y Scroll Speed", Range(-0.1,0.3)) = 0.1
 		
 		_DistortionScaleX("X Scale", float) = 1.0
 		_DistortionScaleY("Y Scale", float) = 1.0

@@ -12,11 +12,10 @@ public class CraftingStation : MonoBehaviour
 	public float shipBaseSpeed = 1f;
 	public GameObject craftingPanel;
 
-	public Button craftingButton;
 	// Start is called before the first frame update
 	void Start()
     {
-		craftingButton.onClick.AddListener(Craft);
+
     }
 
 	private void Craft()

@@ -363,12 +363,14 @@ public class PlayerScript : MonoBehaviour
 		//for testing, not final
 		if (Input.GetKeyDown(KeyCode.E))
 		{
+			Debug.Log("e");
 			if (inventory.Count < maxInventoryCount)
 			{
+				Debug.Log("less");
 				//we want to pick up an item
 				if (currentSelectedItem != null)
 				{
-					
+					Debug.Log("not null");
 					inventory.Add(currentSelectedItem.itemData);
 					//Debug.Log("Adding Item");
 					//Debug.Log(inventory.Count);
