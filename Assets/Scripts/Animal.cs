@@ -7,12 +7,13 @@ public class Animal : MonoBehaviour
 	private Rigidbody2D r2d;
 	private float speed = 2f;
 	private bool isFacingRight = false;
+	public GameObject dropsPrefab;
 
-	private float attackDelay = 3f;
+	//private float attackDelay = 3f;
 
 	private float lifeTime;
 
-	private float health;
+	//private float health;
 
 	private float expectedTravelTime;
 	private float currentTravelTime;
@@ -65,16 +66,22 @@ public class Animal : MonoBehaviour
 		}
 	}
 
-	public void ReceiveDamage(float amt)
+	//public void ReceiveDamage(float amt)
+	//{
+	//	//we're dead
+	//	if (health-amt <= 0)
+	//	{
+	//		if (AnimalDied != null)
+	//		{
+	//			AnimalDied(this);
+	//		}
+	//	}
+	//}
+
+	public void Die()
 	{
-		//we're dead
-		if (health-amt <= 0)
-		{
-			if (AnimalDied != null)
-			{
-				AnimalDied(this);
-			}
-		}
+		Instantiate(dropsPrefab, transform.position, Quaternion.identity);
+		Destroy(gameObject);
 	}
 
 	private void Flee()

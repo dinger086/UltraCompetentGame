@@ -9,16 +9,11 @@ public class HealthMeter : MonoBehaviour
 	Image meter;
 	[SerializeField]
 	RectTransform fx;
-	float depleteSpeed = 0.01f;
+	float depleteSpeed = 0.1f;
 	float fillSpeed = 1f;
 
 	Coroutine depletion;
 
-	//public void OnFoodEaten(float amt)
-	//{
-	//	Debug.Log("food");
-	//	StartCoroutine(Fill(amt));
-	//}
 
 	IEnumerator Deplete()
 	{
@@ -64,9 +59,14 @@ public class HealthMeter : MonoBehaviour
 		}
 	}
 
-	void Depletion()
+	public void Depletion()
 	{
 		depletion = StartCoroutine(Deplete());
+	}
+
+	public void Fill()
+	{
+		StartCoroutine(Fill(100f));
 	}
 
 	void AdjustFX()
