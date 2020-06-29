@@ -38,6 +38,7 @@ public class PlayerScript : MonoBehaviour
 	public int maxInventoryCount;
 	private List<ItemData> inventory = new List<ItemData>();
 	private Item currentSelectedItem = null;
+	private GameObject currentselectedAnimal = null;
 
 	private Rigidbody2D r2d;
     private bool onGround = false;
@@ -91,6 +92,11 @@ public class PlayerScript : MonoBehaviour
 
 		//Enter("air");
     }
+
+	internal void OnVictoryAchieved()
+	{
+		enabled = false;
+	}
 
 	public void OnOxygenDepleted()
 	{
@@ -177,14 +183,20 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+	internal void OnDied()
+	{
+		enabled = false;
+		anim.enabled = false;
+	}
+
 	public void OnAnimalUnselected(GameObject go)
 	{
-		throw new NotImplementedException();
+		currentselectedAnimal = null;
 	}
 
 	public void OnAnimalSelected(GameObject go)
 	{
-		throw new NotImplementedException();
+		currentselectedAnimal = go;
 	}
 
 	private void Swim()
@@ -417,12 +429,13 @@ public class PlayerScript : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.E))
 		{
 			//Debug.Log("e");
-			if (inventory.Count < maxInventoryCount)
+			if (currentSelectedItem != null)
 			{
-				//Debug.Log("less");
-				//we want to pick up an item
-				if (currentSelectedItem != null)
+				if (inventory.Count < maxInventoryCount)
 				{
+
+					//Debug.Log("less");
+					//we want to pick up an item
 					FMODUnity.RuntimeManager.PlayOneShot(pickup);
 					//Debug.Log("not null");
 					inventory.Add(currentSelectedItem.itemData);
@@ -440,6 +453,12 @@ public class PlayerScript : MonoBehaviour
 					//set the currentselectedItem to null
 					currentSelectedItem = null;
 				}
+				
+			} //we are near a fish
+			else if (currentselectedAnimal != null)
+			{
+				currentselectedAnimal.GetComponent<Animal>().Die();
+				currentselectedAnimal = null;
 			}
 			
 		}
@@ -461,7 +480,8 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        switch (collision.gameObject.tag) {
+        switch (collision.gameObject.tag)
+		{
             case "AirBubble":
 
 

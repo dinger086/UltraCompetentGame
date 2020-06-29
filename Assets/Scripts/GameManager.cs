@@ -22,7 +22,12 @@ public class GameManager : MonoBehaviour
 		if (scene.buildIndex == 2)
 		{
 			//unload the main menu
-			SceneManager.UnloadSceneAsync(1);
+			if (SceneManager.GetSceneByBuildIndex(1).isLoaded)
+			{
+				SceneManager.UnloadSceneAsync(1);
+			}
+			
+			
 
 			//we want to pick a player type
 			//PlayerData[] data = Resources.LoadAll<PlayerData>("");
@@ -39,7 +44,8 @@ public class GameManager : MonoBehaviour
 			
 			//unload the story
 			SceneManager.UnloadSceneAsync(2);
-
+			//change the active scene
+			SceneManager.SetActiveScene(scene);
 			//we should notify the systems that require this information
 			//animal/resource spawners, crafting system, the player object
 
@@ -63,6 +69,9 @@ public class GameManager : MonoBehaviour
 			
 			ship.RegisterPlayer(ps);
 
+			FindObjectOfType<PanelHolder>().enginePanel.GetComponent<EnginePanel>().VictoryAchieved += ship.OnVictoryAchieved;
+			FindObjectOfType<PanelHolder>().enginePanel.GetComponent<EnginePanel>().VictoryAchieved += ps.OnVictoryAchieved;
+
 			FindObjectOfType<Distortion>().RegisterPlayer(ps);
 
 			ps.Enter("air");
@@ -82,6 +91,8 @@ public class GameManager : MonoBehaviour
 			HealthMeter hm = FindObjectOfType<HealthMeter>();
 			ps.Deplete += hm.Depletion;
 			ps.Healed += hm.Fill;
+			hm.Dead += ps.OnDied;
+			hm.Dead += FindObjectOfType<FadeOut>().OnPlayerDeath;
 
 			//setup item detection
 			player.GetComponentInChildren<InventoryTrigger>().ItemSelected += ps.OnItemSelected;
@@ -102,21 +113,27 @@ public class GameManager : MonoBehaviour
 			DeathPanel dp = FindObjectOfType<PanelHolder>().deathPanel.GetComponent<DeathPanel>();
 			dp.restart.onClick.AddListener(Restart);
 			dp.mainMenu.onClick.AddListener(ReturnToMainMenu);
+			//get messages from the health meter
+			hm.Dead += dp.OnPlayerDeath;
+
 		}
 	}
 
+	//used in story scene
 	public void Continue()
 	{
 		SceneManager.LoadScene(3, LoadSceneMode.Additive);
 	}
 
 
+	//used when the player dies
 	public void Restart()
 	{
 		SceneManager.UnloadSceneAsync(3);
-		SceneManager.LoadScene(3, LoadSceneMode.Additive);
+		SceneManager.LoadScene(2, LoadSceneMode.Additive);
 	}
 
+	//used when the player dies
 	public void ReturnToMainMenu()
 	{
 

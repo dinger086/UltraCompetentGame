@@ -8,6 +8,7 @@ public class Drag : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHand
 	Vector2 original;
 	public GameObject inventory;
 	public GameObject craftingIngredientHolder;
+	public GameObject enginePanel;
 	public ItemData itemData;
 	public void OnBeginDrag(PointerEventData eventData)
 	{
@@ -25,6 +26,7 @@ public class Drag : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHand
 
 		RectTransform ingredientPanel = craftingIngredientHolder.GetComponent<RectTransform>();
 		RectTransform inventoryPanel = inventory.GetComponent<RectTransform>();
+		RectTransform engine = enginePanel.GetComponent<RectTransform>();
 		if (RectTransformUtility.RectangleContainsScreenPoint(ingredientPanel, Input.mousePosition))
 		{
 			//Debug
@@ -36,6 +38,16 @@ public class Drag : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHand
 		{
 			transform.SetParent(inventoryPanel.transform);
 			craftingIngredientHolder.GetComponent<IngredientHolder>().Remove(itemData);
+		}
+		else if (RectTransformUtility.RectangleContainsScreenPoint(engine, Input.mousePosition))
+		{
+			transform.SetParent(engine.transform);
+			inventory.GetComponent<Inventory>().RemoveItem(gameObject, itemData);
+			if (engine.GetComponent<EnginePanel>().targetItem.name.Equals(itemData.name))
+			{
+				engine.GetComponent<EnginePanel>().Add(itemData);
+			}
+			
 		}
 	}
 }

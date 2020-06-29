@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
 	public GameObject craftingIngredientHolder;
+	public GameObject enginePanel;
 	public GameObject itemPrefab;
 	List<GameObject> items = new List<GameObject>();
 	int maxHorizontalItems = 8;
@@ -57,6 +58,8 @@ public class Inventory : MonoBehaviour
 		GameObject go = Instantiate(itemPrefab, transform);
 		items.Add(go);
 		go.GetComponent<Drag>().craftingIngredientHolder = craftingIngredientHolder;
+		go.GetComponent<Drag>().enginePanel = enginePanel;
+		go.GetComponent<Drag>().inventory = gameObject;
 		go.GetComponentInChildren<Text>().text = item.name;
 	}
 
@@ -65,6 +68,8 @@ public class Inventory : MonoBehaviour
 		GameObject go = Instantiate(itemPrefab, transform);
 		items.Add(go);
 		go.GetComponent<Drag>().craftingIngredientHolder = craftingIngredientHolder;
+		go.GetComponent<Drag>().enginePanel = enginePanel;
+		go.GetComponent<Drag>().inventory = gameObject;
 		go.GetComponentInChildren<Text>().text = item.name;
 	}
 

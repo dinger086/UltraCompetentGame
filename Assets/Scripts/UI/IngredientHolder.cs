@@ -19,9 +19,14 @@ public class IngredientHolder : MonoBehaviour
 		{
 			
 			item.onValueChanged.AddListener((bool b) => { UpdateRecipe(b, item.GetComponent<CraftingRecipe>().recipe); });
+			if (item.isOn)
+			{
+				currentRecipe = item.GetComponent<CraftingRecipe>().recipe;
+			}
 		}
 
 		craftingButton.onClick.AddListener(Craft);
+		//currentRecipe 
     }
 
 	private void Craft()
@@ -54,6 +59,7 @@ public class IngredientHolder : MonoBehaviour
 	public void Add(ItemData itemData)
 	{
 		currentIngredients.Add(itemData);
+		CheckIngredients();
 	}
 
 	void CheckIngredients()

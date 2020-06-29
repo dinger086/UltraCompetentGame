@@ -6,6 +6,7 @@ public class PanelHolder : MonoBehaviour
 {
 	public GameObject craftingPanel;
 	public GameObject deathPanel;
+	public GameObject enginePanel;
 
 	public void ShowDeathPanel()
 	{

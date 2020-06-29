@@ -52,4 +52,17 @@ public class Ship : MonoBehaviour
     {
         
     }
+
+	internal void OnVictoryAchieved()
+	{
+		StartCoroutine(Rise());
+	}
+
+	IEnumerator Rise()
+	{
+		while (true)
+		{
+			transform.position += Vector3.up * Time.deltaTime; 
+		}
+	}
 }

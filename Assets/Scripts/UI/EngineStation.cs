@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EngineStation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+	public GameObject enginePanel;
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
@@ -15,4 +16,23 @@ public class EngineStation : MonoBehaviour
     {
         
     }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		//Debug.Log("here");
+		if (collision.tag == "Player")
+		{
+			//Debug.Log("crafting enabled");
+			enginePanel.SetActive(true);
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.tag == "Player")
+		{
+			enginePanel.SetActive(false);
+			//Debug.Log("crafting disabled");
+		}
+	}
 }

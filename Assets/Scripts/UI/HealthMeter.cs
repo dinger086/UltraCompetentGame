@@ -14,6 +14,8 @@ public class HealthMeter : MonoBehaviour
 
 	Coroutine depletion;
 
+	public delegate void HealthEventHandler();
+	public event HealthEventHandler Dead;
 
 	IEnumerator Deplete()
 	{
@@ -26,10 +28,10 @@ public class HealthMeter : MonoBehaviour
 
 		if (meter.fillAmount <= 0)
 		{
-			//if (Starved != null)
-			//{
-			//	Starved();
-			//}
+			if (Dead != null)
+			{
+				Dead();
+			}
 		}
 	}
 
