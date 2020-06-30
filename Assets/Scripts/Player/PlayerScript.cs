@@ -376,14 +376,14 @@ public class PlayerScript : MonoBehaviour
 
 		if (inWater)
 		{
-			if (!onGround)
-			{
+			//if (!onGround)
+			//{
 				Swim();
-			}
-			else
-			{
-				Walk();
-			}
+			//}
+			//else
+			//{
+			//	Walk();
+			//}
 		}
 		else
 		{

@@ -36,7 +36,7 @@ public class ItemSpawner : MonoBehaviour
 					while (col.tag == "AirBubble" || col.tag == "Ground" || col.tag == "Platform")
 					{
 
-						pos = new Vector2(Random.Range(-20, 20), 20);
+						pos = new Vector2(Random.Range(-60, 60), 20);
 						//without this it causes a potentially infinite loop, of course
 						col = Physics2D.OverlapBox(pos, Vector2.one, 0);
 
