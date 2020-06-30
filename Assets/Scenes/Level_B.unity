@@ -5518,6 +5518,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7708979120655957276, guid: 582837a2db65212468dddfdf85a2ea5e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8309023279003095704, guid: 582837a2db65212468dddfdf85a2ea5e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18790,7 +18795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1139795111
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29101,20 +29106,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1747747855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: e33e95df951591e499ea1633065b7414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/BGM
-  PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  bgm: event:/BGM
 --- !u!1001 &1758559949
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -115,6 +115,11 @@ public class GameManager : MonoBehaviour
 			dp.mainMenu.onClick.AddListener(ReturnToMainMenu);
 			//get messages from the health meter
 			hm.Dead += dp.OnPlayerDeath;
+			//
+			// get messages from the kraken manager
+			FindObjectOfType<SquidTimer>().ReachedDeathPoint += dp.OnPlayerDeath;
+			FindObjectOfType<SquidTimer>().ReachedDeathPoint += ps.OnDied;
+			FindObjectOfType<SquidTimer>().ReachedDeathPoint += FindObjectOfType<FadeOut>().OnPlayerDeath;
 
 		}
 	}

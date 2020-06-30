@@ -6,10 +6,17 @@ public class SquidTimer : MonoBehaviour
 {
 	public float timeLimit = 300f;
 	float currentTime = 0f;
+
 	bool triggered = false;
+	bool deathPointReached = false;
+
 	public GameObject squid;
 	[FMODUnity.EventRef]
 	public string kraken;
+
+	public delegate void KrakenHandler();
+	public event KrakenHandler KrakenAppeared;
+	public event KrakenHandler ReachedDeathPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +32,11 @@ public class SquidTimer : MonoBehaviour
 		{
 			triggered = true;
 			squid.SetActive(true);
+			if (KrakenAppeared != null)
+			{
+				KrakenAppeared();
+			}
+
 			FMODUnity.RuntimeManager.PlayOneShot(kraken);
 			StartCoroutine(MoveSquid());
 		}
@@ -35,6 +47,15 @@ public class SquidTimer : MonoBehaviour
 		while (true)
 		{
 			squid.transform.Translate(3f* Vector3.right * Time.deltaTime);
+
+			if (squid.transform.position.x > 7f && !deathPointReached)
+			{
+				deathPointReached = true;
+				if (ReachedDeathPoint != null)
+				{
+					ReachedDeathPoint();
+				}
+			}
 			yield return null;
 		}
 		
