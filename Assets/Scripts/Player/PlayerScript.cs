@@ -45,7 +45,7 @@ public class PlayerScript : MonoBehaviour
     private bool inWater = false;
 	private bool isFacingRight = false;
 
-
+	public ParticleSystem ps;
 
 	//for sending events to the oxygen meter
 	public delegate void OxygenHandler();
@@ -145,6 +145,7 @@ public class PlayerScript : MonoBehaviour
 					EnteredAir();
 				}
 
+				ps.Stop();
 				anim.SetBool("InWater", false);
 				FMOD.Studio.PLAYBACK_STATE state;
 				water.getPlaybackState(out state);
@@ -164,6 +165,7 @@ public class PlayerScript : MonoBehaviour
                 r2d.gravityScale = 0.1f;
 				//onGround = true;
 
+				ps.Play();
 				FMODUnity.RuntimeManager.PlayOneShot(waterEntry);
 
 				if (EnteredWater != null)
