@@ -14,8 +14,10 @@ public class Inventory : MonoBehaviour
 
 	public delegate void ItemHandler(ItemData item);
 	public event ItemHandler ItemRemoved;
-    // Start is called before the first frame update
-    void Start()
+	public event ItemHandler Added;
+
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
@@ -47,6 +49,7 @@ public class Inventory : MonoBehaviour
 		{
 			if (items[i].GetComponentInChildren<Text>().text.Equals(item.name))
 			{
+				Destroy(items[i]);
 				items.RemoveAt(i);
 				break;
 			}
@@ -56,6 +59,7 @@ public class Inventory : MonoBehaviour
 	private void OnItemAdded(ItemData item)
 	{
 		GameObject go = Instantiate(itemPrefab, transform);
+		go.GetComponent<Drag>().itemData = item;
 		items.Add(go);
 		go.GetComponent<Drag>().craftingIngredientHolder = craftingIngredientHolder;
 		go.GetComponent<Drag>().enginePanel = enginePanel;
@@ -65,12 +69,11 @@ public class Inventory : MonoBehaviour
 
 	public void AddItem(ItemData item)
 	{
-		GameObject go = Instantiate(itemPrefab, transform);
-		items.Add(go);
-		go.GetComponent<Drag>().craftingIngredientHolder = craftingIngredientHolder;
-		go.GetComponent<Drag>().enginePanel = enginePanel;
-		go.GetComponent<Drag>().inventory = gameObject;
-		go.GetComponentInChildren<Text>().text = item.name;
+		OnItemAdded(item);
+		if (Added != null)
+		{
+			Added(item);
+		}
 	}
 
 	public void RemoveItem(GameObject item, ItemData data)

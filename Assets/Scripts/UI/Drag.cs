@@ -32,7 +32,7 @@ public class Drag : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHand
 			//Debug
 			transform.SetParent(craftingIngredientHolder.transform);
 			inventory.GetComponent<Inventory>().RemoveItem(gameObject, itemData);
-			craftingIngredientHolder.GetComponent<IngredientHolder>().Add(itemData);
+			craftingIngredientHolder.GetComponent<IngredientHolder>().Add(itemData, gameObject);
 		}
 		else if (RectTransformUtility.RectangleContainsScreenPoint(inventoryPanel, Input.mousePosition))
 		{

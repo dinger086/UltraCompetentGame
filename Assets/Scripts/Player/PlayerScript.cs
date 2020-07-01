@@ -269,10 +269,15 @@ public class PlayerScript : MonoBehaviour
 		direction *= delta;
 		//Debug.Log("walking " + direction);
 		anim.SetBool("Moving", direction.sqrMagnitude > 0f);
-		r2d.AddForce(direction*20f, ForceMode2D.Force);
+		r2d.AddForce(direction*40f, ForceMode2D.Force);
         
 
     }
+
+	private void OnDisable()
+	{
+		water.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+	}
 
 	private void HandleDirection(bool right)
 	{
