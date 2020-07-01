@@ -9,7 +9,7 @@ public class HungerMeter : MonoBehaviour
 	Image meter;
 	[SerializeField]
 	RectTransform fx;
-	float depleteSpeed = 0.01f;
+	float depleteSpeed = 0.00001f;
 	float fillSpeed = 1f;
 	float eatingDelay = 5f;
 

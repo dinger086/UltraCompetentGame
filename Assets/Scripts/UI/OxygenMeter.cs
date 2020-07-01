@@ -10,7 +10,7 @@ public class OxygenMeter : MonoBehaviour
 	[SerializeField]
 	RectTransform fx;
 	//default is set to 30 seconds
-	public float depleteSpeed = 0.0333f;
+	public float depleteSpeed = 0.000001f;
 	float fillSpeed = 3f;
 
 	public delegate void OxygenDepletionHandler();
