@@ -27,4 +27,9 @@ public class BGM : MonoBehaviour
     {
         
     }
+
+	private void OnDisable()
+	{
+		music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+	}
 }

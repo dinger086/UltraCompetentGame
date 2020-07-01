@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9035132465ab14cb718d0d561caa93, type: 3}
   m_Name: Doctor
   m_EditorClassIdentifier: 
-  swimSpeed: 1
+  swimSpeed: 2
   holdBreath: 30
   itemCraftTimeMultiplier: 1
   itemIngredientMultiplier: 1

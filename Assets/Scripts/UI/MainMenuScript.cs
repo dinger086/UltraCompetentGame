@@ -31,6 +31,14 @@ public class MainMenuScript : MonoBehaviour
 	{
 		play.SetTrigger("FadeIn");
 		quit.SetTrigger("FadeIn");
+
+		Invoke("ActivateButtons", 1f);
+	}
+
+	private void ActivateButtons()
+	{
+		play.GetComponent<Button>().interactable = true;
+		quit.GetComponent<Button>().interactable = true;
 	}
 
 	public void PlayButton()

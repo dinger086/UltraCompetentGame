@@ -26,12 +26,27 @@ public class GameManager : MonoBehaviour
 			{
 				SceneManager.UnloadSceneAsync(1);
 			}
-			
-			
+
+
 
 			//we want to pick a player type
 			//PlayerData[] data = Resources.LoadAll<PlayerData>("");
-			playerData = data[Random.Range(0, data.Length)];
+			
+			//prevents picking the same one twice in row
+			if (playerData != null)
+			{
+				PlayerData prev = playerData;
+				playerData = data[Random.Range(0, data.Length)];
+				while (prev == playerData)
+				{
+					playerData = data[Random.Range(0, data.Length)];
+				}
+			}
+			else
+			{
+				playerData = data[Random.Range(0, data.Length)];
+			}
+			
 			Debug.Log(playerData.name);
 
 			FindObjectOfType<StoryText>().story.text = playerData.description;
@@ -72,7 +87,8 @@ public class GameManager : MonoBehaviour
 			FindObjectOfType<PanelHolder>().enginePanel.GetComponent<EnginePanel>().VictoryAchieved += ship.OnVictoryAchieved;
 			FindObjectOfType<PanelHolder>().enginePanel.GetComponent<EnginePanel>().VictoryAchieved += ps.OnVictoryAchieved;
 
-			FindObjectOfType<Distortion>().RegisterPlayer(ps);
+			//keeps distortion on all the time
+			//FindObjectOfType<Distortion>().RegisterPlayer(ps);
 
 			ps.Enter("air");
 

@@ -45,6 +45,11 @@ public class PlayerScript : MonoBehaviour
     private bool inWater = false;
 	private bool isFacingRight = false;
 
+	internal void Add(ItemData item)
+	{
+		inventory.Add(item);
+	}
+
 	public ParticleSystem ps;
 
 	//for sending events to the oxygen meter
@@ -189,6 +194,12 @@ public class PlayerScript : MonoBehaviour
 	{
 		enabled = false;
 		anim.enabled = false;
+		water.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+	}
+
+	private void OnDisable()
+	{
+		water.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 	}
 
 	public void OnAnimalUnselected(GameObject go)
@@ -269,7 +280,7 @@ public class PlayerScript : MonoBehaviour
 		direction *= delta;
 		//Debug.Log("walking " + direction);
 		anim.SetBool("Moving", direction.sqrMagnitude > 0f);
-		r2d.AddForce(direction*20f, ForceMode2D.Force);
+		r2d.AddForce(direction*40f, ForceMode2D.Force);
         
 
     }
