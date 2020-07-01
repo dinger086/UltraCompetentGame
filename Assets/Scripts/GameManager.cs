@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
 			FindObjectOfType<PanelHolder>().enginePanel.GetComponent<EnginePanel>().VictoryAchieved += ps.OnVictoryAchieved;
 
 			//keeps distortion on all the time
-			//FindObjectOfType<Distortion>().RegisterPlayer(ps);
+			FindObjectOfType<Distortion>().RegisterPlayer(ps);
 
 			ps.Enter("air");
 

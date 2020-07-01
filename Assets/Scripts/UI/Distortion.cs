@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Distortion : MonoBehaviour
 {
-	SpriteRenderer sr;
+	MeshRenderer mr;
 
 	public void RegisterPlayer(PlayerScript ps)
 	{
@@ -15,17 +15,17 @@ public class Distortion : MonoBehaviour
 
 	private void OnEnteredWater()
 	{
-		sr.enabled = true;
+		mr.enabled = true;
 	}
 
 	private void OnEnteredAir()
 	{
-		sr.enabled = false;
+		mr.enabled = false;
 	}
 
 	private void Awake()
 	{
-		sr = GetComponent<SpriteRenderer>();
+		mr = GetComponent<MeshRenderer>();
 	}
 	// Start is called before the first frame update
 	void Start()
