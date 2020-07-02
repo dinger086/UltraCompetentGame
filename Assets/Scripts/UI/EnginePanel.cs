@@ -12,8 +12,14 @@ public class EnginePanel : MonoBehaviour
 
 	public delegate void VictoryHandler();
 	public event VictoryHandler VictoryAchieved;
-    // Start is called before the first frame update
-    void Start()
+
+	[FMODUnity.EventRef]
+	public string insertPart;
+
+	[FMODUnity.EventRef]
+	public string startEngine;
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
@@ -30,8 +36,11 @@ public class EnginePanel : MonoBehaviour
 		items.Add(go);
 		go.GetComponentInChildren<Text>().text = item.name;
 
+		FMODUnity.RuntimeManager.PlayOneShot(insertPart);
+
 		if (items.Count == requiredNumber)
 		{
+			FMODUnity.RuntimeManager.PlayOneShot(startEngine);
 			if (VictoryAchieved != null)
 			{
 				VictoryAchieved();
